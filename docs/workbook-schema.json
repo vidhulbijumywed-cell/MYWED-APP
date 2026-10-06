@@ -1,0 +1,3003 @@
+[
+  {
+    "sheet": "Start Here",
+    "dimensions": "A1:C24",
+    "state": "visible",
+    "headers": {
+      "B4": "FOR EACH NEW CLIENT \u2013 3 STEPS"
+    },
+    "hiddenColumns": [],
+    "hiddenRows": [],
+    "formulaCount": 0,
+    "formulaExamples": [],
+    "validation": []
+  },
+  {
+    "sheet": "Dashboard",
+    "dimensions": "A1:G90",
+    "state": "visible",
+    "headers": {},
+    "hiddenColumns": [],
+    "hiddenRows": [],
+    "formulaCount": 245,
+    "formulaExamples": [
+      {
+        "cell": "E3",
+        "formula": "=EDATE(C3,12)-1"
+      },
+      {
+        "cell": "B7",
+        "formula": "=COUNTIFS(Clients!$AI$5:$AI$154,\">=\"&$C$3,Clients!$AI$5:$AI$154,\"<=\"&$E$3,Clients!$C$5:$C$154,\"<>Cancelled\")"
+      },
+      {
+        "cell": "C7",
+        "formula": "=C14"
+      },
+      {
+        "cell": "D7",
+        "formula": "=D14"
+      },
+      {
+        "cell": "E7",
+        "formula": "=E14"
+      },
+      {
+        "cell": "F7",
+        "formula": "=IF(B7>0,C7/B7,0)"
+      },
+      {
+        "cell": "G7",
+        "formula": "=C22"
+      },
+      {
+        "cell": "B10",
+        "formula": "=C18"
+      },
+      {
+        "cell": "C10",
+        "formula": "=C19"
+      },
+      {
+        "cell": "D10",
+        "formula": "=C20"
+      },
+      {
+        "cell": "E10",
+        "formula": "=C21"
+      },
+      {
+        "cell": "F10",
+        "formula": "=E15"
+      },
+      {
+        "cell": "G10",
+        "formula": "=E16"
+      },
+      {
+        "cell": "C14",
+        "formula": "=SUMIFS(Clients!$Q$5:$Q$154,Clients!$AI$5:$AI$154,\">=\"&$C$3,Clients!$AI$5:$AI$154,\"<=\"&$E$3)"
+      },
+      {
+        "cell": "D14",
+        "formula": "=SUMIFS(Clients!$S$5:$S$154,Clients!$AI$5:$AI$154,\">=\"&$C$3,Clients!$AI$5:$AI$154,\"<=\"&$E$3)"
+      },
+      {
+        "cell": "E14",
+        "formula": "=C14-D14"
+      },
+      {
+        "cell": "C15",
+        "formula": "=SUMIFS(Clients!$Z$5:$Z$154,Clients!$AI$5:$AI$154,\">=\"&$C$3,Clients!$AI$5:$AI$154,\"<=\"&$E$3)"
+      },
+      {
+        "cell": "D15",
+        "formula": "=SUMIFS(Clients!$AA$5:$AA$154,Clients!$AI$5:$AI$154,\">=\"&$C$3,Clients!$AI$5:$AI$154,\"<=\"&$E$3)"
+      },
+      {
+        "cell": "E15",
+        "formula": "=C15-D15"
+      },
+      {
+        "cell": "C16",
+        "formula": "=SUMIFS(Clients!$AB$5:$AB$154,Clients!$AI$5:$AI$154,\">=\"&$C$3,Clients!$AI$5:$AI$154,\"<=\"&$E$3)"
+      },
+      {
+        "cell": "D16",
+        "formula": "=SUMIFS(Clients!$AC$5:$AC$154,Clients!$AI$5:$AI$154,\">=\"&$C$3,Clients!$AI$5:$AI$154,\"<=\"&$E$3)"
+      },
+      {
+        "cell": "E16",
+        "formula": "=C16-D16"
+      },
+      {
+        "cell": "C17",
+        "formula": "=SUMIFS(Clients!$AD$5:$AD$154,Clients!$AI$5:$AI$154,\">=\"&$C$3,Clients!$AI$5:$AI$154,\"<=\"&$E$3)"
+      },
+      {
+        "cell": "D17",
+        "formula": "=C17"
+      },
+      {
+        "cell": "E17",
+        "formula": "=C17-D17"
+      },
+      {
+        "cell": "C18",
+        "formula": "=SUM(C15:C17)"
+      },
+      {
+        "cell": "D18",
+        "formula": "=SUM(D15:D17)"
+      },
+      {
+        "cell": "E18",
+        "formula": "=SUM(E15:E17)"
+      },
+      {
+        "cell": "C19",
+        "formula": "=C14-C18"
+      },
+      {
+        "cell": "D19",
+        "formula": "=D14-D18"
+      },
+      {
+        "cell": "C20",
+        "formula": "=SUMIFS(Expenses!$F$5:$F$1004,Expenses!$J$5:$J$1004,\"GENERAL\",Expenses!$A$5:$A$1004,\">=\"&$C$3,Expenses!$A$5:$A$1004,\"<=\"&$E$3)"
+      },
+      {
+        "cell": "D20",
+        "formula": "=C20"
+      },
+      {
+        "cell": "E20",
+        "formula": "=C20-D20"
+      },
+      {
+        "cell": "C21",
+        "formula": "=C19-C20"
+      },
+      {
+        "cell": "D21",
+        "formula": "=D19-D20"
+      },
+      {
+        "cell": "C22",
+        "formula": "=IF(C14>0,C21/C14,0)"
+      },
+      {
+        "cell": "D22",
+        "formula": "=IF(D14>0,D21/D14,0)"
+      },
+      {
+        "cell": "B26",
+        "formula": "=IF(Setup!H5=\"\",\"\",Setup!H5)"
+      },
+      {
+        "cell": "C26",
+        "formula": "=IF(B26=\"\",\"\",SUMIFS(Expenses!$F$5:$F$1004,Expenses!$D$5:$D$1004,B26,Expenses!$C$5:$C$1004,\">=\"&$C$3,Expenses!$C$5:$C$1004,\"<=\"&$E$3))"
+      },
+      {
+        "cell": "D26",
+        "formula": "=IF(B26=\"\",\"\",SUMIFS(Expenses!$F$5:$F$1004,Expenses!$D$5:$D$1004,B26,Expenses!$J$5:$J$1004,\"GENERAL\",Expenses!$A$5:$A$1004,\">=\"&$C$3,Expenses!$A$5:$A$1004,\"<=\"&$E$3))"
+      },
+      {
+        "cell": "E26",
+        "formula": "=IF(B26=\"\",\"\",C26+D26)"
+      },
+      {
+        "cell": "B27",
+        "formula": "=IF(Setup!H6=\"\",\"\",Setup!H6)"
+      },
+      {
+        "cell": "C27",
+        "formula": "=IF(B27=\"\",\"\",SUMIFS(Expenses!$F$5:$F$1004,Expenses!$D$5:$D$1004,B27,Expenses!$C$5:$C$1004,\">=\"&$C$3,Expenses!$C$5:$C$1004,\"<=\"&$E$3))"
+      },
+      {
+        "cell": "D27",
+        "formula": "=IF(B27=\"\",\"\",SUMIFS(Expenses!$F$5:$F$1004,Expenses!$D$5:$D$1004,B27,Expenses!$J$5:$J$1004,\"GENERAL\",Expenses!$A$5:$A$1004,\">=\"&$C$3,Expenses!$A$5:$A$1004,\"<=\"&$E$3))"
+      }
+    ],
+    "validation": []
+  },
+  {
+    "sheet": "Clients",
+    "dimensions": "A1:AI154",
+    "state": "visible",
+    "headers": {
+      "A4": "Client ID (auto)",
+      "B4": "Couple (auto)",
+      "C4": "Status",
+      "D4": "Bride Name",
+      "E4": "Groom Name",
+      "F4": "Contact Person (who we deal with)",
+      "G4": "Phone / WhatsApp",
+      "H4": "Alternate Phone",
+      "I4": "Email",
+      "J4": "Client Address",
+      "K4": "Lead Source",
+      "L4": "Booking Date",
+      "M4": "Custom Package \u2013 what is included",
+      "N4": "Package Amount (\u20b9) \u2013 as quoted",
+      "O4": "Add-ons (\u20b9)",
+      "P4": "Discount (\u20b9)",
+      "Q4": "Contract Value (auto)",
+      "R4": "Advance Received (auto)",
+      "S4": "Total Received (auto)",
+      "T4": "Balance Due (auto)",
+      "U4": "Payment Status (auto)",
+      "V4": "Balance Due By",
+      "W4": "First Event Date (auto)",
+      "X4": "Last Event Date (auto)",
+      "Y4": "No. of Events (auto)",
+      "Z4": "Crew Cost (auto)",
+      "AA4": "Crew Paid (auto)",
+      "AB4": "Editor / Designer / Printer \u2013 Agreed (auto)",
+      "AC4": "Editor / Designer / Printer \u2013 Paid (auto)",
+      "AD4": "Travel & Other Expenses (auto)",
+      "AE4": "Total Cost (auto)",
+      "AF4": "Net Profit (auto)",
+      "AG4": "Profit Margin (auto)",
+      "AH4": "Notes",
+      "AI4": "FY date"
+    },
+    "hiddenColumns": [
+      "AI"
+    ],
+    "hiddenRows": [],
+    "formulaCount": 2850,
+    "formulaExamples": [
+      {
+        "cell": "A5",
+        "formula": "=IF(AND(D5=\"\",E5=\"\"),\"\",\"MW-\"&TEXT(ROW()-4,\"000\"))"
+      },
+      {
+        "cell": "B5",
+        "formula": "=IF(A5=\"\",\"\",TRIM(D5&IF(AND(D5<>\"\",E5<>\"\"),\" & \",\"\")&E5))"
+      },
+      {
+        "cell": "Q5",
+        "formula": "=IF(A5=\"\",\"\",N(N5)+N(O5)-N(P5))"
+      },
+      {
+        "cell": "R5",
+        "formula": "=IF(A5=\"\",\"\",SUMIFS('Payments In'!$D$5:$D$604,'Payments In'!$H$5:$H$604,A5,'Payments In'!$C$5:$C$604,\"Advance\"))"
+      },
+      {
+        "cell": "S5",
+        "formula": "=IF(A5=\"\",\"\",SUMIFS('Payments In'!$D$5:$D$604,'Payments In'!$H$5:$H$604,A5))"
+      },
+      {
+        "cell": "T5",
+        "formula": "=IF(A5=\"\",\"\",Q5-S5)"
+      },
+      {
+        "cell": "U5",
+        "formula": "=IF(A5=\"\",\"\",IF(Q5=0,\"No amount set\",IF(T5<=0,\"Fully Paid\",IF(S5<=0,\"Unpaid\",IF(S5=R5,\"Advance Paid\",\"Part Paid\")))))"
+      },
+      {
+        "cell": "W5",
+        "formula": "=IF(A5=\"\",\"\",IF(COUNTIFS('Events & Crew'!$AE$5:$AE$604,A5,'Events & Crew'!$C$5:$C$604,\">0\")=0,\"\",_xlfn.MINIFS('Events & Crew'!$C$5:$C$604,'Events & Crew'!$AE$5:$AE$604,A5,'Events & Crew'!$C$5:$C$604,\">0\")))"
+      },
+      {
+        "cell": "X5",
+        "formula": "=IF(A5=\"\",\"\",IF(COUNTIFS('Events & Crew'!$AE$5:$AE$604,A5,'Events & Crew'!$C$5:$C$604,\">0\")=0,\"\",_xlfn.MAXIFS('Events & Crew'!$C$5:$C$604,'Events & Crew'!$AE$5:$AE$604,A5,'Events & Crew'!$C$5:$C$604,\">0\")))"
+      },
+      {
+        "cell": "Y5",
+        "formula": "=IF(A5=\"\",\"\",COUNTIFS('Events & Crew'!$AE$5:$AE$604,A5))"
+      },
+      {
+        "cell": "Z5",
+        "formula": "=IF(A5=\"\",\"\",SUMIFS('Events & Crew'!$Z$5:$Z$604,'Events & Crew'!$AE$5:$AE$604,A5))"
+      },
+      {
+        "cell": "AA5",
+        "formula": "=IF(A5=\"\",\"\",SUMIFS('Crew Payments'!$E$5:$E$604,'Crew Payments'!$I$5:$I$604,A5))"
+      },
+      {
+        "cell": "AB5",
+        "formula": "=IF(A5=\"\",\"\",SUMIFS('Post-Production'!$F$5:$F$604,'Post-Production'!$P$5:$P$604,A5))"
+      },
+      {
+        "cell": "AC5",
+        "formula": "=IF(A5=\"\",\"\",SUMIFS('Post-Production'!$I$5:$I$604,'Post-Production'!$P$5:$P$604,A5))"
+      },
+      {
+        "cell": "AD5",
+        "formula": "=IF(A5=\"\",\"\",SUMIFS(Expenses!$F$5:$F$1004,Expenses!$J$5:$J$1004,A5))"
+      },
+      {
+        "cell": "AE5",
+        "formula": "=IF(A5=\"\",\"\",Z5+AB5+AD5)"
+      },
+      {
+        "cell": "AF5",
+        "formula": "=IF(A5=\"\",\"\",Q5-AE5)"
+      },
+      {
+        "cell": "AG5",
+        "formula": "=IF(A5=\"\",\"\",IF(Q5>0,AF5/Q5,0))"
+      },
+      {
+        "cell": "AI5",
+        "formula": "=IF(A5=\"\",\"\",IF(W5<>\"\",W5,IF(L5<>\"\",L5,\"\")))"
+      },
+      {
+        "cell": "A6",
+        "formula": "=IF(AND(D6=\"\",E6=\"\"),\"\",\"MW-\"&TEXT(ROW()-4,\"000\"))"
+      },
+      {
+        "cell": "B6",
+        "formula": "=IF(A6=\"\",\"\",TRIM(D6&IF(AND(D6<>\"\",E6<>\"\"),\" & \",\"\")&E6))"
+      },
+      {
+        "cell": "Q6",
+        "formula": "=IF(A6=\"\",\"\",N(N6)+N(O6)-N(P6))"
+      },
+      {
+        "cell": "R6",
+        "formula": "=IF(A6=\"\",\"\",SUMIFS('Payments In'!$D$5:$D$604,'Payments In'!$H$5:$H$604,A6,'Payments In'!$C$5:$C$604,\"Advance\"))"
+      },
+      {
+        "cell": "S6",
+        "formula": "=IF(A6=\"\",\"\",SUMIFS('Payments In'!$D$5:$D$604,'Payments In'!$H$5:$H$604,A6))"
+      },
+      {
+        "cell": "T6",
+        "formula": "=IF(A6=\"\",\"\",Q6-S6)"
+      },
+      {
+        "cell": "U6",
+        "formula": "=IF(A6=\"\",\"\",IF(Q6=0,\"No amount set\",IF(T6<=0,\"Fully Paid\",IF(S6<=0,\"Unpaid\",IF(S6=R6,\"Advance Paid\",\"Part Paid\")))))"
+      },
+      {
+        "cell": "W6",
+        "formula": "=IF(A6=\"\",\"\",IF(COUNTIFS('Events & Crew'!$AE$5:$AE$604,A6,'Events & Crew'!$C$5:$C$604,\">0\")=0,\"\",_xlfn.MINIFS('Events & Crew'!$C$5:$C$604,'Events & Crew'!$AE$5:$AE$604,A6,'Events & Crew'!$C$5:$C$604,\">0\")))"
+      },
+      {
+        "cell": "X6",
+        "formula": "=IF(A6=\"\",\"\",IF(COUNTIFS('Events & Crew'!$AE$5:$AE$604,A6,'Events & Crew'!$C$5:$C$604,\">0\")=0,\"\",_xlfn.MAXIFS('Events & Crew'!$C$5:$C$604,'Events & Crew'!$AE$5:$AE$604,A6,'Events & Crew'!$C$5:$C$604,\">0\")))"
+      },
+      {
+        "cell": "Y6",
+        "formula": "=IF(A6=\"\",\"\",COUNTIFS('Events & Crew'!$AE$5:$AE$604,A6))"
+      },
+      {
+        "cell": "Z6",
+        "formula": "=IF(A6=\"\",\"\",SUMIFS('Events & Crew'!$Z$5:$Z$604,'Events & Crew'!$AE$5:$AE$604,A6))"
+      },
+      {
+        "cell": "AA6",
+        "formula": "=IF(A6=\"\",\"\",SUMIFS('Crew Payments'!$E$5:$E$604,'Crew Payments'!$I$5:$I$604,A6))"
+      },
+      {
+        "cell": "AB6",
+        "formula": "=IF(A6=\"\",\"\",SUMIFS('Post-Production'!$F$5:$F$604,'Post-Production'!$P$5:$P$604,A6))"
+      },
+      {
+        "cell": "AC6",
+        "formula": "=IF(A6=\"\",\"\",SUMIFS('Post-Production'!$I$5:$I$604,'Post-Production'!$P$5:$P$604,A6))"
+      },
+      {
+        "cell": "AD6",
+        "formula": "=IF(A6=\"\",\"\",SUMIFS(Expenses!$F$5:$F$1004,Expenses!$J$5:$J$1004,A6))"
+      },
+      {
+        "cell": "AE6",
+        "formula": "=IF(A6=\"\",\"\",Z6+AB6+AD6)"
+      },
+      {
+        "cell": "AF6",
+        "formula": "=IF(A6=\"\",\"\",Q6-AE6)"
+      },
+      {
+        "cell": "AG6",
+        "formula": "=IF(A6=\"\",\"\",IF(Q6>0,AF6/Q6,0))"
+      },
+      {
+        "cell": "AI6",
+        "formula": "=IF(A6=\"\",\"\",IF(W6<>\"\",W6,IF(L6<>\"\",L6,\"\")))"
+      },
+      {
+        "cell": "A7",
+        "formula": "=IF(AND(D7=\"\",E7=\"\"),\"\",\"MW-\"&TEXT(ROW()-4,\"000\"))"
+      },
+      {
+        "cell": "B7",
+        "formula": "=IF(A7=\"\",\"\",TRIM(D7&IF(AND(D7<>\"\",E7<>\"\"),\" & \",\"\")&E7))"
+      },
+      {
+        "cell": "Q7",
+        "formula": "=IF(A7=\"\",\"\",N(N7)+N(O7)-N(P7))"
+      },
+      {
+        "cell": "R7",
+        "formula": "=IF(A7=\"\",\"\",SUMIFS('Payments In'!$D$5:$D$604,'Payments In'!$H$5:$H$604,A7,'Payments In'!$C$5:$C$604,\"Advance\"))"
+      },
+      {
+        "cell": "S7",
+        "formula": "=IF(A7=\"\",\"\",SUMIFS('Payments In'!$D$5:$D$604,'Payments In'!$H$5:$H$604,A7))"
+      },
+      {
+        "cell": "T7",
+        "formula": "=IF(A7=\"\",\"\",Q7-S7)"
+      }
+    ],
+    "validation": [
+      {
+        "range": "C5:C154",
+        "formula": "Setup!$J$5:$J$24",
+        "type": "list"
+      },
+      {
+        "range": "K5:K154",
+        "formula": "Setup!$P$5:$P$24",
+        "type": "list"
+      },
+      {
+        "range": "L5:L154 V5:V154",
+        "formula": "43831",
+        "type": "date"
+      }
+    ]
+  },
+  {
+    "sheet": "Events & Crew",
+    "dimensions": "A1:AR604",
+    "state": "visible",
+    "headers": {
+      "A4": "Client (pick from list)",
+      "B4": "Event",
+      "C4": "Event Date",
+      "D4": "Start Time",
+      "E4": "Venue / Location",
+      "F4": "Work Status (Assigned / Completed)",
+      "G4": "Photographer 1",
+      "H4": "Photographer 2",
+      "I4": "Photographer 3",
+      "J4": "Photographer 4",
+      "K4": "Videographer 1",
+      "L4": "Videographer 2",
+      "M4": "Videographer 3",
+      "N4": "Live Streaming",
+      "O4": "Drone",
+      "P4": "Social Media Creator",
+      "Q4": "Assistant 1",
+      "R4": "Assistant 2",
+      "S4": "Photographers (auto)",
+      "T4": "Videographers (auto)",
+      "U4": "Live (auto)",
+      "V4": "Drone (auto)",
+      "W4": "Social Media (auto)",
+      "X4": "Assistants (auto)",
+      "Y4": "Total Crew (auto)",
+      "Z4": "Crew Cost (auto)",
+      "AA4": "Crew Team (auto)",
+      "AB4": "Crew Mix (auto)",
+      "AC4": "Notes (rituals, shot list, special requests)",
+      "AD4": "Couple",
+      "AE4": "ID",
+      "AF4": "Key",
+      "AG4": "Fee ph1",
+      "AH4": "Fee ph2",
+      "AI4": "Fee ph3",
+      "AJ4": "Fee ph4",
+      "AK4": "Fee vd1",
+      "AL4": "Fee vd2",
+      "AM4": "Fee vd3",
+      "AN4": "Fee live",
+      "AO4": "Fee drone",
+      "AP4": "Fee smc",
+      "AQ4": "Fee as1",
+      "AR4": "Fee as2"
+    },
+    "hiddenColumns": [
+      "AD"
+    ],
+    "hiddenRows": [],
+    "formulaCount": 15000,
+    "formulaExamples": [
+      {
+        "cell": "S5",
+        "formula": "=IF(AE5=\"\",\"\",COUNTIF(G5:J5,\"?*\"))"
+      },
+      {
+        "cell": "T5",
+        "formula": "=IF(AE5=\"\",\"\",COUNTIF(K5:M5,\"?*\"))"
+      },
+      {
+        "cell": "U5",
+        "formula": "=IF(AE5=\"\",\"\",COUNTIF(N5,\"?*\"))"
+      },
+      {
+        "cell": "V5",
+        "formula": "=IF(AE5=\"\",\"\",COUNTIF(O5,\"?*\"))"
+      },
+      {
+        "cell": "W5",
+        "formula": "=IF(AE5=\"\",\"\",COUNTIF(P5,\"?*\"))"
+      },
+      {
+        "cell": "X5",
+        "formula": "=IF(AE5=\"\",\"\",COUNTIF(Q5:R5,\"?*\"))"
+      },
+      {
+        "cell": "Y5",
+        "formula": "=IF(AE5=\"\",\"\",SUM(S5:X5))"
+      },
+      {
+        "cell": "Z5",
+        "formula": "=IF(AE5=\"\",\"\",SUM(AG5:AR5))"
+      },
+      {
+        "cell": "AA5",
+        "formula": "=IF(AE5=\"\",\"\",IF(Y5=0,\"\",MID(IF(G5<>\"\",\"; \"&G5,\"\")&IF(H5<>\"\",\"; \"&H5,\"\")&IF(I5<>\"\",\"; \"&I5,\"\")&IF(J5<>\"\",\"; \"&J5,\"\")&IF(K5<>\"\",\"; \"&K5,\"\")&IF(L5<>\"\",\"; \"&L5,\"\")&IF(M5<>\"\",\"; \"&M5,\"\")&IF(N5<>\"\",\"; \"&N5,\"\")&IF(O5<>\"\",\"; \"&O5,\"\")&IF(P5<>\"\",\"; \"&P5,\"\")&IF(Q5<>\"\",\"; \"&Q5,\"\")&IF(R5<>\"\",\"; \"&R5,\"\"),3,500)))"
+      },
+      {
+        "cell": "AB5",
+        "formula": "=IF(AE5=\"\",\"\",IF(Y5=0,\"\",MID(IF(S5>0,\" \u00b7 \"&S5&\" Photo\",\"\")&IF(T5>0,\" \u00b7 \"&T5&\" Video\",\"\")&IF(U5>0,\" \u00b7 Live\",\"\")&IF(V5>0,\" \u00b7 Drone\",\"\")&IF(W5>0,\" \u00b7 Social Media\",\"\")&IF(X5>0,\" \u00b7 \"&X5&\" Assistant\",\"\"),4,200)))"
+      },
+      {
+        "cell": "AD5",
+        "formula": "=IF(AE5=\"\",\"\",IFERROR(INDEX(Clients!$B$5:$B$154,MATCH(AE5,Clients!$A$5:$A$154,0)),\"\"))"
+      },
+      {
+        "cell": "AE5",
+        "formula": "=IF(A5=\"\",\"\",LEFT(A5,FIND(\" \",A5&\" \")-1))"
+      },
+      {
+        "cell": "AF5",
+        "formula": "=IF(AE5=\"\",\"\",AE5&\"|\"&COUNTIF(AE$5:AE5,AE5))"
+      },
+      {
+        "cell": "AG5",
+        "formula": "=IF(G5=\"\",\"\",IF(SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,G5,'Crew Rates'!$B$5:$B$504,\"Photographer\",'Crew Rates'!$C$5:$C$504,B5)>0,SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,G5,'Crew Rates'!$B$5:$B$504,\"Photographer\",'Crew Rates'!$C$5:$C$504,B5),SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,G5,'Crew Rates'!$B$5:$B$504,\"Photographer\",'Crew Rates'!$C$5:$C$504,\"All functions\")))"
+      },
+      {
+        "cell": "AH5",
+        "formula": "=IF(H5=\"\",\"\",IF(SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,H5,'Crew Rates'!$B$5:$B$504,\"Photographer\",'Crew Rates'!$C$5:$C$504,B5)>0,SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,H5,'Crew Rates'!$B$5:$B$504,\"Photographer\",'Crew Rates'!$C$5:$C$504,B5),SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,H5,'Crew Rates'!$B$5:$B$504,\"Photographer\",'Crew Rates'!$C$5:$C$504,\"All functions\")))"
+      },
+      {
+        "cell": "AI5",
+        "formula": "=IF(I5=\"\",\"\",IF(SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,I5,'Crew Rates'!$B$5:$B$504,\"Photographer\",'Crew Rates'!$C$5:$C$504,B5)>0,SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,I5,'Crew Rates'!$B$5:$B$504,\"Photographer\",'Crew Rates'!$C$5:$C$504,B5),SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,I5,'Crew Rates'!$B$5:$B$504,\"Photographer\",'Crew Rates'!$C$5:$C$504,\"All functions\")))"
+      },
+      {
+        "cell": "AJ5",
+        "formula": "=IF(J5=\"\",\"\",IF(SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,J5,'Crew Rates'!$B$5:$B$504,\"Photographer\",'Crew Rates'!$C$5:$C$504,B5)>0,SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,J5,'Crew Rates'!$B$5:$B$504,\"Photographer\",'Crew Rates'!$C$5:$C$504,B5),SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,J5,'Crew Rates'!$B$5:$B$504,\"Photographer\",'Crew Rates'!$C$5:$C$504,\"All functions\")))"
+      },
+      {
+        "cell": "AK5",
+        "formula": "=IF(K5=\"\",\"\",IF(SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,K5,'Crew Rates'!$B$5:$B$504,\"Videographer\",'Crew Rates'!$C$5:$C$504,B5)>0,SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,K5,'Crew Rates'!$B$5:$B$504,\"Videographer\",'Crew Rates'!$C$5:$C$504,B5),SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,K5,'Crew Rates'!$B$5:$B$504,\"Videographer\",'Crew Rates'!$C$5:$C$504,\"All functions\")))"
+      },
+      {
+        "cell": "AL5",
+        "formula": "=IF(L5=\"\",\"\",IF(SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,L5,'Crew Rates'!$B$5:$B$504,\"Videographer\",'Crew Rates'!$C$5:$C$504,B5)>0,SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,L5,'Crew Rates'!$B$5:$B$504,\"Videographer\",'Crew Rates'!$C$5:$C$504,B5),SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,L5,'Crew Rates'!$B$5:$B$504,\"Videographer\",'Crew Rates'!$C$5:$C$504,\"All functions\")))"
+      },
+      {
+        "cell": "AM5",
+        "formula": "=IF(M5=\"\",\"\",IF(SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,M5,'Crew Rates'!$B$5:$B$504,\"Videographer\",'Crew Rates'!$C$5:$C$504,B5)>0,SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,M5,'Crew Rates'!$B$5:$B$504,\"Videographer\",'Crew Rates'!$C$5:$C$504,B5),SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,M5,'Crew Rates'!$B$5:$B$504,\"Videographer\",'Crew Rates'!$C$5:$C$504,\"All functions\")))"
+      },
+      {
+        "cell": "AN5",
+        "formula": "=IF(N5=\"\",\"\",IF(SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,N5,'Crew Rates'!$B$5:$B$504,\"Live Streaming\",'Crew Rates'!$C$5:$C$504,B5)>0,SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,N5,'Crew Rates'!$B$5:$B$504,\"Live Streaming\",'Crew Rates'!$C$5:$C$504,B5),SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,N5,'Crew Rates'!$B$5:$B$504,\"Live Streaming\",'Crew Rates'!$C$5:$C$504,\"All functions\")))"
+      },
+      {
+        "cell": "AO5",
+        "formula": "=IF(O5=\"\",\"\",IF(SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,O5,'Crew Rates'!$B$5:$B$504,\"Drone\",'Crew Rates'!$C$5:$C$504,B5)>0,SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,O5,'Crew Rates'!$B$5:$B$504,\"Drone\",'Crew Rates'!$C$5:$C$504,B5),SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,O5,'Crew Rates'!$B$5:$B$504,\"Drone\",'Crew Rates'!$C$5:$C$504,\"All functions\")))"
+      },
+      {
+        "cell": "AP5",
+        "formula": "=IF(P5=\"\",\"\",IF(SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,P5,'Crew Rates'!$B$5:$B$504,\"Social Media Creator\",'Crew Rates'!$C$5:$C$504,B5)>0,SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,P5,'Crew Rates'!$B$5:$B$504,\"Social Media Creator\",'Crew Rates'!$C$5:$C$504,B5),SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,P5,'Crew Rates'!$B$5:$B$504,\"Social Media Creator\",'Crew Rates'!$C$5:$C$504,\"All functions\")))"
+      },
+      {
+        "cell": "AQ5",
+        "formula": "=IF(Q5=\"\",\"\",IF(SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,Q5,'Crew Rates'!$B$5:$B$504,\"Assistant\",'Crew Rates'!$C$5:$C$504,B5)>0,SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,Q5,'Crew Rates'!$B$5:$B$504,\"Assistant\",'Crew Rates'!$C$5:$C$504,B5),SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,Q5,'Crew Rates'!$B$5:$B$504,\"Assistant\",'Crew Rates'!$C$5:$C$504,\"All functions\")))"
+      },
+      {
+        "cell": "AR5",
+        "formula": "=IF(R5=\"\",\"\",IF(SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,R5,'Crew Rates'!$B$5:$B$504,\"Assistant\",'Crew Rates'!$C$5:$C$504,B5)>0,SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,R5,'Crew Rates'!$B$5:$B$504,\"Assistant\",'Crew Rates'!$C$5:$C$504,B5),SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,R5,'Crew Rates'!$B$5:$B$504,\"Assistant\",'Crew Rates'!$C$5:$C$504,\"All functions\")))"
+      },
+      {
+        "cell": "S6",
+        "formula": "=IF(AE6=\"\",\"\",COUNTIF(G6:J6,\"?*\"))"
+      },
+      {
+        "cell": "T6",
+        "formula": "=IF(AE6=\"\",\"\",COUNTIF(K6:M6,\"?*\"))"
+      },
+      {
+        "cell": "U6",
+        "formula": "=IF(AE6=\"\",\"\",COUNTIF(N6,\"?*\"))"
+      },
+      {
+        "cell": "V6",
+        "formula": "=IF(AE6=\"\",\"\",COUNTIF(O6,\"?*\"))"
+      },
+      {
+        "cell": "W6",
+        "formula": "=IF(AE6=\"\",\"\",COUNTIF(P6,\"?*\"))"
+      },
+      {
+        "cell": "X6",
+        "formula": "=IF(AE6=\"\",\"\",COUNTIF(Q6:R6,\"?*\"))"
+      },
+      {
+        "cell": "Y6",
+        "formula": "=IF(AE6=\"\",\"\",SUM(S6:X6))"
+      },
+      {
+        "cell": "Z6",
+        "formula": "=IF(AE6=\"\",\"\",SUM(AG6:AR6))"
+      },
+      {
+        "cell": "AA6",
+        "formula": "=IF(AE6=\"\",\"\",IF(Y6=0,\"\",MID(IF(G6<>\"\",\"; \"&G6,\"\")&IF(H6<>\"\",\"; \"&H6,\"\")&IF(I6<>\"\",\"; \"&I6,\"\")&IF(J6<>\"\",\"; \"&J6,\"\")&IF(K6<>\"\",\"; \"&K6,\"\")&IF(L6<>\"\",\"; \"&L6,\"\")&IF(M6<>\"\",\"; \"&M6,\"\")&IF(N6<>\"\",\"; \"&N6,\"\")&IF(O6<>\"\",\"; \"&O6,\"\")&IF(P6<>\"\",\"; \"&P6,\"\")&IF(Q6<>\"\",\"; \"&Q6,\"\")&IF(R6<>\"\",\"; \"&R6,\"\"),3,500)))"
+      },
+      {
+        "cell": "AB6",
+        "formula": "=IF(AE6=\"\",\"\",IF(Y6=0,\"\",MID(IF(S6>0,\" \u00b7 \"&S6&\" Photo\",\"\")&IF(T6>0,\" \u00b7 \"&T6&\" Video\",\"\")&IF(U6>0,\" \u00b7 Live\",\"\")&IF(V6>0,\" \u00b7 Drone\",\"\")&IF(W6>0,\" \u00b7 Social Media\",\"\")&IF(X6>0,\" \u00b7 \"&X6&\" Assistant\",\"\"),4,200)))"
+      },
+      {
+        "cell": "AD6",
+        "formula": "=IF(AE6=\"\",\"\",IFERROR(INDEX(Clients!$B$5:$B$154,MATCH(AE6,Clients!$A$5:$A$154,0)),\"\"))"
+      },
+      {
+        "cell": "AE6",
+        "formula": "=IF(A6=\"\",\"\",LEFT(A6,FIND(\" \",A6&\" \")-1))"
+      },
+      {
+        "cell": "AF6",
+        "formula": "=IF(AE6=\"\",\"\",AE6&\"|\"&COUNTIF(AE$5:AE6,AE6))"
+      },
+      {
+        "cell": "AG6",
+        "formula": "=IF(G6=\"\",\"\",IF(SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,G6,'Crew Rates'!$B$5:$B$504,\"Photographer\",'Crew Rates'!$C$5:$C$504,B6)>0,SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,G6,'Crew Rates'!$B$5:$B$504,\"Photographer\",'Crew Rates'!$C$5:$C$504,B6),SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,G6,'Crew Rates'!$B$5:$B$504,\"Photographer\",'Crew Rates'!$C$5:$C$504,\"All functions\")))"
+      },
+      {
+        "cell": "AH6",
+        "formula": "=IF(H6=\"\",\"\",IF(SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,H6,'Crew Rates'!$B$5:$B$504,\"Photographer\",'Crew Rates'!$C$5:$C$504,B6)>0,SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,H6,'Crew Rates'!$B$5:$B$504,\"Photographer\",'Crew Rates'!$C$5:$C$504,B6),SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,H6,'Crew Rates'!$B$5:$B$504,\"Photographer\",'Crew Rates'!$C$5:$C$504,\"All functions\")))"
+      },
+      {
+        "cell": "AI6",
+        "formula": "=IF(I6=\"\",\"\",IF(SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,I6,'Crew Rates'!$B$5:$B$504,\"Photographer\",'Crew Rates'!$C$5:$C$504,B6)>0,SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,I6,'Crew Rates'!$B$5:$B$504,\"Photographer\",'Crew Rates'!$C$5:$C$504,B6),SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,I6,'Crew Rates'!$B$5:$B$504,\"Photographer\",'Crew Rates'!$C$5:$C$504,\"All functions\")))"
+      },
+      {
+        "cell": "AJ6",
+        "formula": "=IF(J6=\"\",\"\",IF(SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,J6,'Crew Rates'!$B$5:$B$504,\"Photographer\",'Crew Rates'!$C$5:$C$504,B6)>0,SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,J6,'Crew Rates'!$B$5:$B$504,\"Photographer\",'Crew Rates'!$C$5:$C$504,B6),SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,J6,'Crew Rates'!$B$5:$B$504,\"Photographer\",'Crew Rates'!$C$5:$C$504,\"All functions\")))"
+      },
+      {
+        "cell": "AK6",
+        "formula": "=IF(K6=\"\",\"\",IF(SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,K6,'Crew Rates'!$B$5:$B$504,\"Videographer\",'Crew Rates'!$C$5:$C$504,B6)>0,SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,K6,'Crew Rates'!$B$5:$B$504,\"Videographer\",'Crew Rates'!$C$5:$C$504,B6),SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,K6,'Crew Rates'!$B$5:$B$504,\"Videographer\",'Crew Rates'!$C$5:$C$504,\"All functions\")))"
+      },
+      {
+        "cell": "AL6",
+        "formula": "=IF(L6=\"\",\"\",IF(SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,L6,'Crew Rates'!$B$5:$B$504,\"Videographer\",'Crew Rates'!$C$5:$C$504,B6)>0,SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,L6,'Crew Rates'!$B$5:$B$504,\"Videographer\",'Crew Rates'!$C$5:$C$504,B6),SUMIFS('Crew Rates'!$D$5:$D$504,'Crew Rates'!$A$5:$A$504,L6,'Crew Rates'!$B$5:$B$504,\"Videographer\",'Crew Rates'!$C$5:$C$504,\"All functions\")))"
+      }
+    ],
+    "validation": [
+      {
+        "range": "C5:C604",
+        "formula": "43831",
+        "type": "date"
+      },
+      {
+        "range": "A5:A604",
+        "formula": "Setup!$W$5:$W$154",
+        "type": "list"
+      },
+      {
+        "range": "B5:B604",
+        "formula": "Setup!$G$5:$G$24",
+        "type": "list"
+      },
+      {
+        "range": "F5:F604",
+        "formula": "Setup!$T$5:$T$24",
+        "type": "list"
+      },
+      {
+        "range": "G5:G604",
+        "formula": "'Crew Directory'!$A$5:$A$104",
+        "type": "list"
+      },
+      {
+        "range": "H5:H604",
+        "formula": "'Crew Directory'!$A$5:$A$104",
+        "type": "list"
+      },
+      {
+        "range": "I5:I604",
+        "formula": "'Crew Directory'!$A$5:$A$104",
+        "type": "list"
+      },
+      {
+        "range": "J5:J604",
+        "formula": "'Crew Directory'!$A$5:$A$104",
+        "type": "list"
+      },
+      {
+        "range": "K5:K604",
+        "formula": "'Crew Directory'!$A$5:$A$104",
+        "type": "list"
+      },
+      {
+        "range": "L5:L604",
+        "formula": "'Crew Directory'!$A$5:$A$104",
+        "type": "list"
+      },
+      {
+        "range": "M5:M604",
+        "formula": "'Crew Directory'!$A$5:$A$104",
+        "type": "list"
+      },
+      {
+        "range": "N5:N604",
+        "formula": "'Crew Directory'!$A$5:$A$104",
+        "type": "list"
+      },
+      {
+        "range": "O5:O604",
+        "formula": "'Crew Directory'!$A$5:$A$104",
+        "type": "list"
+      },
+      {
+        "range": "P5:P604",
+        "formula": "'Crew Directory'!$A$5:$A$104",
+        "type": "list"
+      },
+      {
+        "range": "Q5:Q604",
+        "formula": "'Crew Directory'!$A$5:$A$104",
+        "type": "list"
+      },
+      {
+        "range": "R5:R604",
+        "formula": "'Crew Directory'!$A$5:$A$104",
+        "type": "list"
+      }
+    ]
+  },
+  {
+    "sheet": "Calendar",
+    "dimensions": "A1:H18",
+    "state": "visible",
+    "headers": {
+      "B4": "=TEXT(DATE($C$3,$E$3,1),\"mmmm yyyy\")"
+    },
+    "hiddenColumns": [],
+    "hiddenRows": [],
+    "formulaCount": 85,
+    "formulaExamples": [
+      {
+        "cell": "B4",
+        "formula": "=TEXT(DATE($C$3,$E$3,1),\"mmmm yyyy\")"
+      },
+      {
+        "cell": "B7",
+        "formula": "=DATE($C$3,$E$3,1)-WEEKDAY(DATE($C$3,$E$3,1),2)+1+0"
+      },
+      {
+        "cell": "C7",
+        "formula": "=DATE($C$3,$E$3,1)-WEEKDAY(DATE($C$3,$E$3,1),2)+1+1"
+      },
+      {
+        "cell": "D7",
+        "formula": "=DATE($C$3,$E$3,1)-WEEKDAY(DATE($C$3,$E$3,1),2)+1+2"
+      },
+      {
+        "cell": "E7",
+        "formula": "=DATE($C$3,$E$3,1)-WEEKDAY(DATE($C$3,$E$3,1),2)+1+3"
+      },
+      {
+        "cell": "F7",
+        "formula": "=DATE($C$3,$E$3,1)-WEEKDAY(DATE($C$3,$E$3,1),2)+1+4"
+      },
+      {
+        "cell": "G7",
+        "formula": "=DATE($C$3,$E$3,1)-WEEKDAY(DATE($C$3,$E$3,1),2)+1+5"
+      },
+      {
+        "cell": "H7",
+        "formula": "=DATE($C$3,$E$3,1)-WEEKDAY(DATE($C$3,$E$3,1),2)+1+6"
+      },
+      {
+        "cell": "B8",
+        "formula": "=IF(COUNTIF('Events & Crew'!$C$5:$C$604,B7)=0,\"\",INDEX('Events & Crew'!$AD$5:$AD$604,MATCH(B7,'Events & Crew'!$C$5:$C$604,0))&\" \u2013 \"&INDEX('Events & Crew'!$B$5:$B$604,MATCH(B7,'Events & Crew'!$C$5:$C$604,0))&IF(COUNTIF('Events & Crew'!$C$5:$C$604,B7)>1,\"  (+\"&(COUNTIF('Events & Crew'!$C$5:$C$604,B7)-1)&\" more)\",\"\"))"
+      },
+      {
+        "cell": "C8",
+        "formula": "=IF(COUNTIF('Events & Crew'!$C$5:$C$604,C7)=0,\"\",INDEX('Events & Crew'!$AD$5:$AD$604,MATCH(C7,'Events & Crew'!$C$5:$C$604,0))&\" \u2013 \"&INDEX('Events & Crew'!$B$5:$B$604,MATCH(C7,'Events & Crew'!$C$5:$C$604,0))&IF(COUNTIF('Events & Crew'!$C$5:$C$604,C7)>1,\"  (+\"&(COUNTIF('Events & Crew'!$C$5:$C$604,C7)-1)&\" more)\",\"\"))"
+      },
+      {
+        "cell": "D8",
+        "formula": "=IF(COUNTIF('Events & Crew'!$C$5:$C$604,D7)=0,\"\",INDEX('Events & Crew'!$AD$5:$AD$604,MATCH(D7,'Events & Crew'!$C$5:$C$604,0))&\" \u2013 \"&INDEX('Events & Crew'!$B$5:$B$604,MATCH(D7,'Events & Crew'!$C$5:$C$604,0))&IF(COUNTIF('Events & Crew'!$C$5:$C$604,D7)>1,\"  (+\"&(COUNTIF('Events & Crew'!$C$5:$C$604,D7)-1)&\" more)\",\"\"))"
+      },
+      {
+        "cell": "E8",
+        "formula": "=IF(COUNTIF('Events & Crew'!$C$5:$C$604,E7)=0,\"\",INDEX('Events & Crew'!$AD$5:$AD$604,MATCH(E7,'Events & Crew'!$C$5:$C$604,0))&\" \u2013 \"&INDEX('Events & Crew'!$B$5:$B$604,MATCH(E7,'Events & Crew'!$C$5:$C$604,0))&IF(COUNTIF('Events & Crew'!$C$5:$C$604,E7)>1,\"  (+\"&(COUNTIF('Events & Crew'!$C$5:$C$604,E7)-1)&\" more)\",\"\"))"
+      },
+      {
+        "cell": "F8",
+        "formula": "=IF(COUNTIF('Events & Crew'!$C$5:$C$604,F7)=0,\"\",INDEX('Events & Crew'!$AD$5:$AD$604,MATCH(F7,'Events & Crew'!$C$5:$C$604,0))&\" \u2013 \"&INDEX('Events & Crew'!$B$5:$B$604,MATCH(F7,'Events & Crew'!$C$5:$C$604,0))&IF(COUNTIF('Events & Crew'!$C$5:$C$604,F7)>1,\"  (+\"&(COUNTIF('Events & Crew'!$C$5:$C$604,F7)-1)&\" more)\",\"\"))"
+      },
+      {
+        "cell": "G8",
+        "formula": "=IF(COUNTIF('Events & Crew'!$C$5:$C$604,G7)=0,\"\",INDEX('Events & Crew'!$AD$5:$AD$604,MATCH(G7,'Events & Crew'!$C$5:$C$604,0))&\" \u2013 \"&INDEX('Events & Crew'!$B$5:$B$604,MATCH(G7,'Events & Crew'!$C$5:$C$604,0))&IF(COUNTIF('Events & Crew'!$C$5:$C$604,G7)>1,\"  (+\"&(COUNTIF('Events & Crew'!$C$5:$C$604,G7)-1)&\" more)\",\"\"))"
+      },
+      {
+        "cell": "H8",
+        "formula": "=IF(COUNTIF('Events & Crew'!$C$5:$C$604,H7)=0,\"\",INDEX('Events & Crew'!$AD$5:$AD$604,MATCH(H7,'Events & Crew'!$C$5:$C$604,0))&\" \u2013 \"&INDEX('Events & Crew'!$B$5:$B$604,MATCH(H7,'Events & Crew'!$C$5:$C$604,0))&IF(COUNTIF('Events & Crew'!$C$5:$C$604,H7)>1,\"  (+\"&(COUNTIF('Events & Crew'!$C$5:$C$604,H7)-1)&\" more)\",\"\"))"
+      },
+      {
+        "cell": "B9",
+        "formula": "=DATE($C$3,$E$3,1)-WEEKDAY(DATE($C$3,$E$3,1),2)+1+7"
+      },
+      {
+        "cell": "C9",
+        "formula": "=DATE($C$3,$E$3,1)-WEEKDAY(DATE($C$3,$E$3,1),2)+1+8"
+      },
+      {
+        "cell": "D9",
+        "formula": "=DATE($C$3,$E$3,1)-WEEKDAY(DATE($C$3,$E$3,1),2)+1+9"
+      },
+      {
+        "cell": "E9",
+        "formula": "=DATE($C$3,$E$3,1)-WEEKDAY(DATE($C$3,$E$3,1),2)+1+10"
+      },
+      {
+        "cell": "F9",
+        "formula": "=DATE($C$3,$E$3,1)-WEEKDAY(DATE($C$3,$E$3,1),2)+1+11"
+      },
+      {
+        "cell": "G9",
+        "formula": "=DATE($C$3,$E$3,1)-WEEKDAY(DATE($C$3,$E$3,1),2)+1+12"
+      },
+      {
+        "cell": "H9",
+        "formula": "=DATE($C$3,$E$3,1)-WEEKDAY(DATE($C$3,$E$3,1),2)+1+13"
+      },
+      {
+        "cell": "B10",
+        "formula": "=IF(COUNTIF('Events & Crew'!$C$5:$C$604,B9)=0,\"\",INDEX('Events & Crew'!$AD$5:$AD$604,MATCH(B9,'Events & Crew'!$C$5:$C$604,0))&\" \u2013 \"&INDEX('Events & Crew'!$B$5:$B$604,MATCH(B9,'Events & Crew'!$C$5:$C$604,0))&IF(COUNTIF('Events & Crew'!$C$5:$C$604,B9)>1,\"  (+\"&(COUNTIF('Events & Crew'!$C$5:$C$604,B9)-1)&\" more)\",\"\"))"
+      },
+      {
+        "cell": "C10",
+        "formula": "=IF(COUNTIF('Events & Crew'!$C$5:$C$604,C9)=0,\"\",INDEX('Events & Crew'!$AD$5:$AD$604,MATCH(C9,'Events & Crew'!$C$5:$C$604,0))&\" \u2013 \"&INDEX('Events & Crew'!$B$5:$B$604,MATCH(C9,'Events & Crew'!$C$5:$C$604,0))&IF(COUNTIF('Events & Crew'!$C$5:$C$604,C9)>1,\"  (+\"&(COUNTIF('Events & Crew'!$C$5:$C$604,C9)-1)&\" more)\",\"\"))"
+      },
+      {
+        "cell": "D10",
+        "formula": "=IF(COUNTIF('Events & Crew'!$C$5:$C$604,D9)=0,\"\",INDEX('Events & Crew'!$AD$5:$AD$604,MATCH(D9,'Events & Crew'!$C$5:$C$604,0))&\" \u2013 \"&INDEX('Events & Crew'!$B$5:$B$604,MATCH(D9,'Events & Crew'!$C$5:$C$604,0))&IF(COUNTIF('Events & Crew'!$C$5:$C$604,D9)>1,\"  (+\"&(COUNTIF('Events & Crew'!$C$5:$C$604,D9)-1)&\" more)\",\"\"))"
+      },
+      {
+        "cell": "E10",
+        "formula": "=IF(COUNTIF('Events & Crew'!$C$5:$C$604,E9)=0,\"\",INDEX('Events & Crew'!$AD$5:$AD$604,MATCH(E9,'Events & Crew'!$C$5:$C$604,0))&\" \u2013 \"&INDEX('Events & Crew'!$B$5:$B$604,MATCH(E9,'Events & Crew'!$C$5:$C$604,0))&IF(COUNTIF('Events & Crew'!$C$5:$C$604,E9)>1,\"  (+\"&(COUNTIF('Events & Crew'!$C$5:$C$604,E9)-1)&\" more)\",\"\"))"
+      },
+      {
+        "cell": "F10",
+        "formula": "=IF(COUNTIF('Events & Crew'!$C$5:$C$604,F9)=0,\"\",INDEX('Events & Crew'!$AD$5:$AD$604,MATCH(F9,'Events & Crew'!$C$5:$C$604,0))&\" \u2013 \"&INDEX('Events & Crew'!$B$5:$B$604,MATCH(F9,'Events & Crew'!$C$5:$C$604,0))&IF(COUNTIF('Events & Crew'!$C$5:$C$604,F9)>1,\"  (+\"&(COUNTIF('Events & Crew'!$C$5:$C$604,F9)-1)&\" more)\",\"\"))"
+      },
+      {
+        "cell": "G10",
+        "formula": "=IF(COUNTIF('Events & Crew'!$C$5:$C$604,G9)=0,\"\",INDEX('Events & Crew'!$AD$5:$AD$604,MATCH(G9,'Events & Crew'!$C$5:$C$604,0))&\" \u2013 \"&INDEX('Events & Crew'!$B$5:$B$604,MATCH(G9,'Events & Crew'!$C$5:$C$604,0))&IF(COUNTIF('Events & Crew'!$C$5:$C$604,G9)>1,\"  (+\"&(COUNTIF('Events & Crew'!$C$5:$C$604,G9)-1)&\" more)\",\"\"))"
+      },
+      {
+        "cell": "H10",
+        "formula": "=IF(COUNTIF('Events & Crew'!$C$5:$C$604,H9)=0,\"\",INDEX('Events & Crew'!$AD$5:$AD$604,MATCH(H9,'Events & Crew'!$C$5:$C$604,0))&\" \u2013 \"&INDEX('Events & Crew'!$B$5:$B$604,MATCH(H9,'Events & Crew'!$C$5:$C$604,0))&IF(COUNTIF('Events & Crew'!$C$5:$C$604,H9)>1,\"  (+\"&(COUNTIF('Events & Crew'!$C$5:$C$604,H9)-1)&\" more)\",\"\"))"
+      },
+      {
+        "cell": "B11",
+        "formula": "=DATE($C$3,$E$3,1)-WEEKDAY(DATE($C$3,$E$3,1),2)+1+14"
+      },
+      {
+        "cell": "C11",
+        "formula": "=DATE($C$3,$E$3,1)-WEEKDAY(DATE($C$3,$E$3,1),2)+1+15"
+      },
+      {
+        "cell": "D11",
+        "formula": "=DATE($C$3,$E$3,1)-WEEKDAY(DATE($C$3,$E$3,1),2)+1+16"
+      },
+      {
+        "cell": "E11",
+        "formula": "=DATE($C$3,$E$3,1)-WEEKDAY(DATE($C$3,$E$3,1),2)+1+17"
+      },
+      {
+        "cell": "F11",
+        "formula": "=DATE($C$3,$E$3,1)-WEEKDAY(DATE($C$3,$E$3,1),2)+1+18"
+      },
+      {
+        "cell": "G11",
+        "formula": "=DATE($C$3,$E$3,1)-WEEKDAY(DATE($C$3,$E$3,1),2)+1+19"
+      },
+      {
+        "cell": "H11",
+        "formula": "=DATE($C$3,$E$3,1)-WEEKDAY(DATE($C$3,$E$3,1),2)+1+20"
+      },
+      {
+        "cell": "B12",
+        "formula": "=IF(COUNTIF('Events & Crew'!$C$5:$C$604,B11)=0,\"\",INDEX('Events & Crew'!$AD$5:$AD$604,MATCH(B11,'Events & Crew'!$C$5:$C$604,0))&\" \u2013 \"&INDEX('Events & Crew'!$B$5:$B$604,MATCH(B11,'Events & Crew'!$C$5:$C$604,0))&IF(COUNTIF('Events & Crew'!$C$5:$C$604,B11)>1,\"  (+\"&(COUNTIF('Events & Crew'!$C$5:$C$604,B11)-1)&\" more)\",\"\"))"
+      },
+      {
+        "cell": "C12",
+        "formula": "=IF(COUNTIF('Events & Crew'!$C$5:$C$604,C11)=0,\"\",INDEX('Events & Crew'!$AD$5:$AD$604,MATCH(C11,'Events & Crew'!$C$5:$C$604,0))&\" \u2013 \"&INDEX('Events & Crew'!$B$5:$B$604,MATCH(C11,'Events & Crew'!$C$5:$C$604,0))&IF(COUNTIF('Events & Crew'!$C$5:$C$604,C11)>1,\"  (+\"&(COUNTIF('Events & Crew'!$C$5:$C$604,C11)-1)&\" more)\",\"\"))"
+      },
+      {
+        "cell": "D12",
+        "formula": "=IF(COUNTIF('Events & Crew'!$C$5:$C$604,D11)=0,\"\",INDEX('Events & Crew'!$AD$5:$AD$604,MATCH(D11,'Events & Crew'!$C$5:$C$604,0))&\" \u2013 \"&INDEX('Events & Crew'!$B$5:$B$604,MATCH(D11,'Events & Crew'!$C$5:$C$604,0))&IF(COUNTIF('Events & Crew'!$C$5:$C$604,D11)>1,\"  (+\"&(COUNTIF('Events & Crew'!$C$5:$C$604,D11)-1)&\" more)\",\"\"))"
+      },
+      {
+        "cell": "E12",
+        "formula": "=IF(COUNTIF('Events & Crew'!$C$5:$C$604,E11)=0,\"\",INDEX('Events & Crew'!$AD$5:$AD$604,MATCH(E11,'Events & Crew'!$C$5:$C$604,0))&\" \u2013 \"&INDEX('Events & Crew'!$B$5:$B$604,MATCH(E11,'Events & Crew'!$C$5:$C$604,0))&IF(COUNTIF('Events & Crew'!$C$5:$C$604,E11)>1,\"  (+\"&(COUNTIF('Events & Crew'!$C$5:$C$604,E11)-1)&\" more)\",\"\"))"
+      },
+      {
+        "cell": "F12",
+        "formula": "=IF(COUNTIF('Events & Crew'!$C$5:$C$604,F11)=0,\"\",INDEX('Events & Crew'!$AD$5:$AD$604,MATCH(F11,'Events & Crew'!$C$5:$C$604,0))&\" \u2013 \"&INDEX('Events & Crew'!$B$5:$B$604,MATCH(F11,'Events & Crew'!$C$5:$C$604,0))&IF(COUNTIF('Events & Crew'!$C$5:$C$604,F11)>1,\"  (+\"&(COUNTIF('Events & Crew'!$C$5:$C$604,F11)-1)&\" more)\",\"\"))"
+      },
+      {
+        "cell": "G12",
+        "formula": "=IF(COUNTIF('Events & Crew'!$C$5:$C$604,G11)=0,\"\",INDEX('Events & Crew'!$AD$5:$AD$604,MATCH(G11,'Events & Crew'!$C$5:$C$604,0))&\" \u2013 \"&INDEX('Events & Crew'!$B$5:$B$604,MATCH(G11,'Events & Crew'!$C$5:$C$604,0))&IF(COUNTIF('Events & Crew'!$C$5:$C$604,G11)>1,\"  (+\"&(COUNTIF('Events & Crew'!$C$5:$C$604,G11)-1)&\" more)\",\"\"))"
+      },
+      {
+        "cell": "H12",
+        "formula": "=IF(COUNTIF('Events & Crew'!$C$5:$C$604,H11)=0,\"\",INDEX('Events & Crew'!$AD$5:$AD$604,MATCH(H11,'Events & Crew'!$C$5:$C$604,0))&\" \u2013 \"&INDEX('Events & Crew'!$B$5:$B$604,MATCH(H11,'Events & Crew'!$C$5:$C$604,0))&IF(COUNTIF('Events & Crew'!$C$5:$C$604,H11)>1,\"  (+\"&(COUNTIF('Events & Crew'!$C$5:$C$604,H11)-1)&\" more)\",\"\"))"
+      },
+      {
+        "cell": "B13",
+        "formula": "=DATE($C$3,$E$3,1)-WEEKDAY(DATE($C$3,$E$3,1),2)+1+21"
+      }
+    ],
+    "validation": [
+      {
+        "range": "E3",
+        "formula": "1",
+        "type": "whole"
+      },
+      {
+        "range": "C3",
+        "formula": "2020",
+        "type": "whole"
+      }
+    ]
+  },
+  {
+    "sheet": "Client Page",
+    "dimensions": "A1:K133",
+    "state": "visible",
+    "headers": {},
+    "hiddenColumns": [
+      "J"
+    ],
+    "hiddenRows": [],
+    "formulaCount": 682,
+    "formulaExamples": [
+      {
+        "cell": "J3",
+        "formula": "=IFERROR(MATCH($K$3,Clients!$A$5:$A$154,0),\"\")"
+      },
+      {
+        "cell": "K3",
+        "formula": "=IF($C$3=\"\",\"\",LEFT($C$3,FIND(\" \",$C$3&\" \")-1))"
+      },
+      {
+        "cell": "C6",
+        "formula": "=IF($J$3=\"\",\"\",IF(INDEX(Clients!$A$5:$A$154,$J$3)=\"\",\"\",INDEX(Clients!$A$5:$A$154,$J$3)))"
+      },
+      {
+        "cell": "F6",
+        "formula": "=IF($J$3=\"\",\"\",IF(INDEX(Clients!$C$5:$C$154,$J$3)=\"\",\"\",INDEX(Clients!$C$5:$C$154,$J$3)))"
+      },
+      {
+        "cell": "C7",
+        "formula": "=IF($J$3=\"\",\"\",IF(INDEX(Clients!$D$5:$D$154,$J$3)=\"\",\"\",INDEX(Clients!$D$5:$D$154,$J$3)))"
+      },
+      {
+        "cell": "F7",
+        "formula": "=IF($J$3=\"\",\"\",IF(INDEX(Clients!$E$5:$E$154,$J$3)=\"\",\"\",INDEX(Clients!$E$5:$E$154,$J$3)))"
+      },
+      {
+        "cell": "C8",
+        "formula": "=IF($J$3=\"\",\"\",IF(INDEX(Clients!$F$5:$F$154,$J$3)=\"\",\"\",INDEX(Clients!$F$5:$F$154,$J$3)))"
+      },
+      {
+        "cell": "F8",
+        "formula": "=IF($J$3=\"\",\"\",IF(INDEX(Clients!$G$5:$G$154,$J$3)=\"\",\"\",INDEX(Clients!$G$5:$G$154,$J$3)))"
+      },
+      {
+        "cell": "C9",
+        "formula": "=IF($J$3=\"\",\"\",IF(INDEX(Clients!$H$5:$H$154,$J$3)=\"\",\"\",INDEX(Clients!$H$5:$H$154,$J$3)))"
+      },
+      {
+        "cell": "F9",
+        "formula": "=IF($J$3=\"\",\"\",IF(INDEX(Clients!$I$5:$I$154,$J$3)=\"\",\"\",INDEX(Clients!$I$5:$I$154,$J$3)))"
+      },
+      {
+        "cell": "C10",
+        "formula": "=IF($J$3=\"\",\"\",IF(INDEX(Clients!$J$5:$J$154,$J$3)=\"\",\"\",INDEX(Clients!$J$5:$J$154,$J$3)))"
+      },
+      {
+        "cell": "F10",
+        "formula": "=IF($J$3=\"\",\"\",IF(INDEX(Clients!$K$5:$K$154,$J$3)=\"\",\"\",INDEX(Clients!$K$5:$K$154,$J$3)))"
+      },
+      {
+        "cell": "C11",
+        "formula": "=IF($J$3=\"\",\"\",IF(INDEX(Clients!$W$5:$W$154,$J$3)=\"\",\"\",TEXT(INDEX(Clients!$W$5:$W$154,$J$3),\"dd-mmm-yyyy\")&IF(INDEX(Clients!$X$5:$X$154,$J$3)=INDEX(Clients!$W$5:$W$154,$J$3),\"\",\" to \"&TEXT(INDEX(Clients!$X$5:$X$154,$J$3),\"dd-mmm-yyyy\"))))"
+      },
+      {
+        "cell": "F11",
+        "formula": "=IF($J$3=\"\",\"\",IF(INDEX(Clients!$L$5:$L$154,$J$3)=\"\",\"\",INDEX(Clients!$L$5:$L$154,$J$3)))"
+      },
+      {
+        "cell": "C12",
+        "formula": "=IF($J$3=\"\",\"\",IF(INDEX(Clients!$M$5:$M$154,$J$3)=\"\",\"\",INDEX(Clients!$M$5:$M$154,$J$3)))"
+      },
+      {
+        "cell": "C13",
+        "formula": "=IF($J$3=\"\",\"\",IF(INDEX(Clients!$AH$5:$AH$154,$J$3)=\"\",\"\",INDEX(Clients!$AH$5:$AH$154,$J$3)))"
+      },
+      {
+        "cell": "C16",
+        "formula": "=IF($J$3=\"\",\"\",N(INDEX(Clients!$N$5:$N$154,$J$3)))"
+      },
+      {
+        "cell": "F16",
+        "formula": "=IF($J$3=\"\",\"\",N(INDEX(Clients!$R$5:$R$154,$J$3)))"
+      },
+      {
+        "cell": "C17",
+        "formula": "=IF($J$3=\"\",\"\",N(INDEX(Clients!$O$5:$O$154,$J$3)))"
+      },
+      {
+        "cell": "F17",
+        "formula": "=IF($J$3=\"\",\"\",N(INDEX(Clients!$S$5:$S$154,$J$3)))"
+      },
+      {
+        "cell": "C18",
+        "formula": "=IF($J$3=\"\",\"\",N(INDEX(Clients!$P$5:$P$154,$J$3)))"
+      },
+      {
+        "cell": "F18",
+        "formula": "=IF($J$3=\"\",\"\",N(INDEX(Clients!$T$5:$T$154,$J$3)))"
+      },
+      {
+        "cell": "C19",
+        "formula": "=IF($J$3=\"\",\"\",N(INDEX(Clients!$Q$5:$Q$154,$J$3)))"
+      },
+      {
+        "cell": "F19",
+        "formula": "=IF($J$3=\"\",\"\",IF(INDEX(Clients!$U$5:$U$154,$J$3)=\"\",\"\",INDEX(Clients!$U$5:$U$154,$J$3)))"
+      },
+      {
+        "cell": "F20",
+        "formula": "=IF($J$3=\"\",\"\",IF(INDEX(Clients!$V$5:$V$154,$J$3)=\"\",\"\",INDEX(Clients!$V$5:$V$154,$J$3)))"
+      },
+      {
+        "cell": "C23",
+        "formula": "=IF($J$3=\"\",\"\",SUMIFS('Events & Crew'!$S$5:$S$604,'Events & Crew'!$AE$5:$AE$604,$K$3))"
+      },
+      {
+        "cell": "F23",
+        "formula": "=IF($J$3=\"\",\"\",SUMIFS('Events & Crew'!$T$5:$T$604,'Events & Crew'!$AE$5:$AE$604,$K$3))"
+      },
+      {
+        "cell": "C24",
+        "formula": "=IF($J$3=\"\",\"\",SUMIFS('Events & Crew'!$U$5:$U$604,'Events & Crew'!$AE$5:$AE$604,$K$3))"
+      },
+      {
+        "cell": "F24",
+        "formula": "=IF($J$3=\"\",\"\",SUMIFS('Events & Crew'!$V$5:$V$604,'Events & Crew'!$AE$5:$AE$604,$K$3))"
+      },
+      {
+        "cell": "C25",
+        "formula": "=IF($J$3=\"\",\"\",SUMIFS('Events & Crew'!$W$5:$W$604,'Events & Crew'!$AE$5:$AE$604,$K$3))"
+      },
+      {
+        "cell": "F25",
+        "formula": "=IF($J$3=\"\",\"\",SUMIFS('Events & Crew'!$X$5:$X$604,'Events & Crew'!$AE$5:$AE$604,$K$3))"
+      },
+      {
+        "cell": "C26",
+        "formula": "=IF($J$3=\"\",\"\",SUMIFS('Events & Crew'!$Y$5:$Y$604,'Events & Crew'!$AE$5:$AE$604,$K$3))"
+      },
+      {
+        "cell": "F26",
+        "formula": "=IF($J$3=\"\",\"\",N(INDEX(Clients!$Y$5:$Y$154,$J$3)))"
+      },
+      {
+        "cell": "C29",
+        "formula": "=IF($J$3=\"\",\"\",N(INDEX(Clients!$Z$5:$Z$154,$J$3)))"
+      },
+      {
+        "cell": "F29",
+        "formula": "=IF($J$3=\"\",\"\",N(INDEX(Clients!$AA$5:$AA$154,$J$3)))"
+      },
+      {
+        "cell": "C30",
+        "formula": "=IF($J$3=\"\",\"\",N(INDEX(Clients!$AB$5:$AB$154,$J$3)))"
+      },
+      {
+        "cell": "F30",
+        "formula": "=IF($J$3=\"\",\"\",N(INDEX(Clients!$AC$5:$AC$154,$J$3)))"
+      },
+      {
+        "cell": "C31",
+        "formula": "=IF($J$3=\"\",\"\",N(INDEX(Clients!$AD$5:$AD$154,$J$3)))"
+      },
+      {
+        "cell": "F31",
+        "formula": "=IF($J$3=\"\",\"\",N(INDEX(Clients!$AE$5:$AE$154,$J$3)))"
+      },
+      {
+        "cell": "C32",
+        "formula": "=IF($J$3=\"\",\"\",N(INDEX(Clients!$AF$5:$AF$154,$J$3)))"
+      },
+      {
+        "cell": "F32",
+        "formula": "=IF($J$3=\"\",\"\",N(INDEX(Clients!$AG$5:$AG$154,$J$3)))"
+      },
+      {
+        "cell": "I34",
+        "formula": "=IF(COUNTIF('Events & Crew'!$AE$5:$AE$604,$K$3)>12,\"+\"&(COUNTIF('Events & Crew'!$AE$5:$AE$604,$K$3)-12)&\" more \u2013 see tab\",\"\")"
+      },
+      {
+        "cell": "A36",
+        "formula": "=IF($J36=\"\",\"\",1)"
+      },
+      {
+        "cell": "B36",
+        "formula": "=IF($J36=\"\",\"\",IF(INDEX('Events & Crew'!$B$5:$B$604,$J36)=\"\",\"\",INDEX('Events & Crew'!$B$5:$B$604,$J36)))"
+      }
+    ],
+    "validation": [
+      {
+        "range": "C3",
+        "formula": "Setup!$W$5:$W$154",
+        "type": "list"
+      }
+    ]
+  },
+  {
+    "sheet": "Payments In",
+    "dimensions": "A1:I604",
+    "state": "visible",
+    "headers": {
+      "A4": "Client (pick from list)",
+      "B4": "Payment Date",
+      "C4": "Payment Type",
+      "D4": "Amount Received (\u20b9)",
+      "E4": "Mode",
+      "F4": "Reference / UPI Txn ID / Cheque No.",
+      "G4": "Notes",
+      "H4": "ID",
+      "I4": "Key"
+    },
+    "hiddenColumns": [
+      "H"
+    ],
+    "hiddenRows": [],
+    "formulaCount": 1200,
+    "formulaExamples": [
+      {
+        "cell": "H5",
+        "formula": "=IF(A5=\"\",\"\",LEFT(A5,FIND(\" \",A5&\" \")-1))"
+      },
+      {
+        "cell": "I5",
+        "formula": "=IF(H5=\"\",\"\",H5&\"|\"&COUNTIF(H$5:H5,H5))"
+      },
+      {
+        "cell": "H6",
+        "formula": "=IF(A6=\"\",\"\",LEFT(A6,FIND(\" \",A6&\" \")-1))"
+      },
+      {
+        "cell": "I6",
+        "formula": "=IF(H6=\"\",\"\",H6&\"|\"&COUNTIF(H$5:H6,H6))"
+      },
+      {
+        "cell": "H7",
+        "formula": "=IF(A7=\"\",\"\",LEFT(A7,FIND(\" \",A7&\" \")-1))"
+      },
+      {
+        "cell": "I7",
+        "formula": "=IF(H7=\"\",\"\",H7&\"|\"&COUNTIF(H$5:H7,H7))"
+      },
+      {
+        "cell": "H8",
+        "formula": "=IF(A8=\"\",\"\",LEFT(A8,FIND(\" \",A8&\" \")-1))"
+      },
+      {
+        "cell": "I8",
+        "formula": "=IF(H8=\"\",\"\",H8&\"|\"&COUNTIF(H$5:H8,H8))"
+      },
+      {
+        "cell": "H9",
+        "formula": "=IF(A9=\"\",\"\",LEFT(A9,FIND(\" \",A9&\" \")-1))"
+      },
+      {
+        "cell": "I9",
+        "formula": "=IF(H9=\"\",\"\",H9&\"|\"&COUNTIF(H$5:H9,H9))"
+      },
+      {
+        "cell": "H10",
+        "formula": "=IF(A10=\"\",\"\",LEFT(A10,FIND(\" \",A10&\" \")-1))"
+      },
+      {
+        "cell": "I10",
+        "formula": "=IF(H10=\"\",\"\",H10&\"|\"&COUNTIF(H$5:H10,H10))"
+      },
+      {
+        "cell": "H11",
+        "formula": "=IF(A11=\"\",\"\",LEFT(A11,FIND(\" \",A11&\" \")-1))"
+      },
+      {
+        "cell": "I11",
+        "formula": "=IF(H11=\"\",\"\",H11&\"|\"&COUNTIF(H$5:H11,H11))"
+      },
+      {
+        "cell": "H12",
+        "formula": "=IF(A12=\"\",\"\",LEFT(A12,FIND(\" \",A12&\" \")-1))"
+      },
+      {
+        "cell": "I12",
+        "formula": "=IF(H12=\"\",\"\",H12&\"|\"&COUNTIF(H$5:H12,H12))"
+      },
+      {
+        "cell": "H13",
+        "formula": "=IF(A13=\"\",\"\",LEFT(A13,FIND(\" \",A13&\" \")-1))"
+      },
+      {
+        "cell": "I13",
+        "formula": "=IF(H13=\"\",\"\",H13&\"|\"&COUNTIF(H$5:H13,H13))"
+      },
+      {
+        "cell": "H14",
+        "formula": "=IF(A14=\"\",\"\",LEFT(A14,FIND(\" \",A14&\" \")-1))"
+      },
+      {
+        "cell": "I14",
+        "formula": "=IF(H14=\"\",\"\",H14&\"|\"&COUNTIF(H$5:H14,H14))"
+      },
+      {
+        "cell": "H15",
+        "formula": "=IF(A15=\"\",\"\",LEFT(A15,FIND(\" \",A15&\" \")-1))"
+      },
+      {
+        "cell": "I15",
+        "formula": "=IF(H15=\"\",\"\",H15&\"|\"&COUNTIF(H$5:H15,H15))"
+      },
+      {
+        "cell": "H16",
+        "formula": "=IF(A16=\"\",\"\",LEFT(A16,FIND(\" \",A16&\" \")-1))"
+      },
+      {
+        "cell": "I16",
+        "formula": "=IF(H16=\"\",\"\",H16&\"|\"&COUNTIF(H$5:H16,H16))"
+      },
+      {
+        "cell": "H17",
+        "formula": "=IF(A17=\"\",\"\",LEFT(A17,FIND(\" \",A17&\" \")-1))"
+      },
+      {
+        "cell": "I17",
+        "formula": "=IF(H17=\"\",\"\",H17&\"|\"&COUNTIF(H$5:H17,H17))"
+      },
+      {
+        "cell": "H18",
+        "formula": "=IF(A18=\"\",\"\",LEFT(A18,FIND(\" \",A18&\" \")-1))"
+      },
+      {
+        "cell": "I18",
+        "formula": "=IF(H18=\"\",\"\",H18&\"|\"&COUNTIF(H$5:H18,H18))"
+      },
+      {
+        "cell": "H19",
+        "formula": "=IF(A19=\"\",\"\",LEFT(A19,FIND(\" \",A19&\" \")-1))"
+      },
+      {
+        "cell": "I19",
+        "formula": "=IF(H19=\"\",\"\",H19&\"|\"&COUNTIF(H$5:H19,H19))"
+      },
+      {
+        "cell": "H20",
+        "formula": "=IF(A20=\"\",\"\",LEFT(A20,FIND(\" \",A20&\" \")-1))"
+      },
+      {
+        "cell": "I20",
+        "formula": "=IF(H20=\"\",\"\",H20&\"|\"&COUNTIF(H$5:H20,H20))"
+      },
+      {
+        "cell": "H21",
+        "formula": "=IF(A21=\"\",\"\",LEFT(A21,FIND(\" \",A21&\" \")-1))"
+      },
+      {
+        "cell": "I21",
+        "formula": "=IF(H21=\"\",\"\",H21&\"|\"&COUNTIF(H$5:H21,H21))"
+      },
+      {
+        "cell": "H22",
+        "formula": "=IF(A22=\"\",\"\",LEFT(A22,FIND(\" \",A22&\" \")-1))"
+      },
+      {
+        "cell": "I22",
+        "formula": "=IF(H22=\"\",\"\",H22&\"|\"&COUNTIF(H$5:H22,H22))"
+      },
+      {
+        "cell": "H23",
+        "formula": "=IF(A23=\"\",\"\",LEFT(A23,FIND(\" \",A23&\" \")-1))"
+      },
+      {
+        "cell": "I23",
+        "formula": "=IF(H23=\"\",\"\",H23&\"|\"&COUNTIF(H$5:H23,H23))"
+      },
+      {
+        "cell": "H24",
+        "formula": "=IF(A24=\"\",\"\",LEFT(A24,FIND(\" \",A24&\" \")-1))"
+      },
+      {
+        "cell": "I24",
+        "formula": "=IF(H24=\"\",\"\",H24&\"|\"&COUNTIF(H$5:H24,H24))"
+      },
+      {
+        "cell": "H25",
+        "formula": "=IF(A25=\"\",\"\",LEFT(A25,FIND(\" \",A25&\" \")-1))"
+      },
+      {
+        "cell": "I25",
+        "formula": "=IF(H25=\"\",\"\",H25&\"|\"&COUNTIF(H$5:H25,H25))"
+      },
+      {
+        "cell": "H26",
+        "formula": "=IF(A26=\"\",\"\",LEFT(A26,FIND(\" \",A26&\" \")-1))"
+      },
+      {
+        "cell": "I26",
+        "formula": "=IF(H26=\"\",\"\",H26&\"|\"&COUNTIF(H$5:H26,H26))"
+      }
+    ],
+    "validation": [
+      {
+        "range": "B5:B604",
+        "formula": "43831",
+        "type": "date"
+      },
+      {
+        "range": "A5:A604",
+        "formula": "Setup!$W$5:$W$154",
+        "type": "list"
+      },
+      {
+        "range": "C5:C604",
+        "formula": "Setup!$Q$5:$Q$24",
+        "type": "list"
+      },
+      {
+        "range": "E5:E604",
+        "formula": "Setup!$I$5:$I$24",
+        "type": "list"
+      }
+    ]
+  },
+  {
+    "sheet": "Crew Payments",
+    "dimensions": "A1:T604",
+    "state": "visible",
+    "headers": {
+      "A4": "Payment Date",
+      "B4": "Client (pick from list)",
+      "C4": "Crew Member",
+      "D4": "Type",
+      "E4": "Amount Paid (\u20b9)",
+      "F4": "Mode",
+      "G4": "Reference",
+      "H4": "Notes",
+      "I4": "ID",
+      "J4": "Key",
+      "L4": "Crew Member",
+      "M4": "Main Category",
+      "N4": "Events Assigned (not done yet)",
+      "O4": "Events Completed",
+      "P4": "Assigned Work \u20b9 (not done yet)",
+      "Q4": "Completed Work \u20b9",
+      "R4": "Paid So Far \u20b9",
+      "S4": "PENDING TO PAY NOW \u20b9",
+      "T4": "Advance Ahead of Work \u20b9"
+    },
+    "hiddenColumns": [
+      "I"
+    ],
+    "hiddenRows": [],
+    "formulaCount": 2100,
+    "formulaExamples": [
+      {
+        "cell": "I5",
+        "formula": "=IF(B5=\"\",\"\",LEFT(B5,FIND(\" \",B5&\" \")-1))"
+      },
+      {
+        "cell": "J5",
+        "formula": "=IF(I5=\"\",\"\",I5&\"|\"&COUNTIF(I$5:I5,I5))"
+      },
+      {
+        "cell": "L5",
+        "formula": "=IF('Crew Directory'!A5=\"\",\"\",'Crew Directory'!A5)"
+      },
+      {
+        "cell": "M5",
+        "formula": "=IF($L5=\"\",\"\",IF('Crew Directory'!B5=\"\",\"\",'Crew Directory'!B5))"
+      },
+      {
+        "cell": "N5",
+        "formula": "=IF($L5=\"\",\"\",COUNTIFS('Events & Crew'!$G$5:$G$604,$L5,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+COUNTIFS('Events & Crew'!$H$5:$H$604,$L5,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+COUNTIFS('Events & Crew'!$I$5:$I$604,$L5,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+COUNTIFS('Events & Crew'!$J$5:$J$604,$L5,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+COUNTIFS('Events & Crew'!$K$5:$K$604,$L5,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+COUNTIFS('Events & Crew'!$L$5:$L$604,$L5,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+COUNTIFS('Events & Crew'!$M$5:$M$604,$L5,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+COUNTIFS('Events & Crew'!$N$5:$N$604,$L5,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+COUNTIFS('Events & Crew'!$O$5:$O$604,$L5,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+COUNTIFS('Events & Crew'!$P$5:$P$604,$L5,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+COUNTIFS('Events & Crew'!$Q$5:$Q$604,$L5,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+COUNTIFS('Events & Crew'!$R$5:$R$604,$L5,'Events & Crew'!$F$5:$F$604,\"<>Completed\"))"
+      },
+      {
+        "cell": "O5",
+        "formula": "=IF($L5=\"\",\"\",COUNTIFS('Events & Crew'!$G$5:$G$604,$L5,'Events & Crew'!$F$5:$F$604,\"Completed\")+COUNTIFS('Events & Crew'!$H$5:$H$604,$L5,'Events & Crew'!$F$5:$F$604,\"Completed\")+COUNTIFS('Events & Crew'!$I$5:$I$604,$L5,'Events & Crew'!$F$5:$F$604,\"Completed\")+COUNTIFS('Events & Crew'!$J$5:$J$604,$L5,'Events & Crew'!$F$5:$F$604,\"Completed\")+COUNTIFS('Events & Crew'!$K$5:$K$604,$L5,'Events & Crew'!$F$5:$F$604,\"Completed\")+COUNTIFS('Events & Crew'!$L$5:$L$604,$L5,'Events & Crew'!$F$5:$F$604,\"Completed\")+COUNTIFS('Events & Crew'!$M$5:$M$604,$L5,'Events & Crew'!$F$5:$F$604,\"Completed\")+COUNTIFS('Events & Crew'!$N$5:$N$604,$L5,'Events & Crew'!$F$5:$F$604,\"Completed\")+COUNTIFS('Events & Crew'!$O$5:$O$604,$L5,'Events & Crew'!$F$5:$F$604,\"Completed\")+COUNTIFS('Events & Crew'!$P$5:$P$604,$L5,'Events & Crew'!$F$5:$F$604,\"Completed\")+COUNTIFS('Events & Crew'!$Q$5:$Q$604,$L5,'Events & Crew'!$F$5:$F$604,\"Completed\")+COUNTIFS('Events & Crew'!$R$5:$R$604,$L5,'Events & Crew'!$F$5:$F$604,\"Completed\"))"
+      },
+      {
+        "cell": "P5",
+        "formula": "=IF($L5=\"\",\"\",SUMIFS('Events & Crew'!$AG$5:$AG$604,'Events & Crew'!$G$5:$G$604,$L5,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+SUMIFS('Events & Crew'!$AH$5:$AH$604,'Events & Crew'!$H$5:$H$604,$L5,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+SUMIFS('Events & Crew'!$AI$5:$AI$604,'Events & Crew'!$I$5:$I$604,$L5,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+SUMIFS('Events & Crew'!$AJ$5:$AJ$604,'Events & Crew'!$J$5:$J$604,$L5,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+SUMIFS('Events & Crew'!$AK$5:$AK$604,'Events & Crew'!$K$5:$K$604,$L5,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+SUMIFS('Events & Crew'!$AL$5:$AL$604,'Events & Crew'!$L$5:$L$604,$L5,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+SUMIFS('Events & Crew'!$AM$5:$AM$604,'Events & Crew'!$M$5:$M$604,$L5,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+SUMIFS('Events & Crew'!$AN$5:$AN$604,'Events & Crew'!$N$5:$N$604,$L5,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+SUMIFS('Events & Crew'!$AO$5:$AO$604,'Events & Crew'!$O$5:$O$604,$L5,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+SUMIFS('Events & Crew'!$AP$5:$AP$604,'Events & Crew'!$P$5:$P$604,$L5,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+SUMIFS('Events & Crew'!$AQ$5:$AQ$604,'Events & Crew'!$Q$5:$Q$604,$L5,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+SUMIFS('Events & Crew'!$AR$5:$AR$604,'Events & Crew'!$R$5:$R$604,$L5,'Events & Crew'!$F$5:$F$604,\"<>Completed\"))"
+      },
+      {
+        "cell": "Q5",
+        "formula": "=IF($L5=\"\",\"\",SUMIFS('Events & Crew'!$AG$5:$AG$604,'Events & Crew'!$G$5:$G$604,$L5,'Events & Crew'!$F$5:$F$604,\"Completed\")+SUMIFS('Events & Crew'!$AH$5:$AH$604,'Events & Crew'!$H$5:$H$604,$L5,'Events & Crew'!$F$5:$F$604,\"Completed\")+SUMIFS('Events & Crew'!$AI$5:$AI$604,'Events & Crew'!$I$5:$I$604,$L5,'Events & Crew'!$F$5:$F$604,\"Completed\")+SUMIFS('Events & Crew'!$AJ$5:$AJ$604,'Events & Crew'!$J$5:$J$604,$L5,'Events & Crew'!$F$5:$F$604,\"Completed\")+SUMIFS('Events & Crew'!$AK$5:$AK$604,'Events & Crew'!$K$5:$K$604,$L5,'Events & Crew'!$F$5:$F$604,\"Completed\")+SUMIFS('Events & Crew'!$AL$5:$AL$604,'Events & Crew'!$L$5:$L$604,$L5,'Events & Crew'!$F$5:$F$604,\"Completed\")+SUMIFS('Events & Crew'!$AM$5:$AM$604,'Events & Crew'!$M$5:$M$604,$L5,'Events & Crew'!$F$5:$F$604,\"Completed\")+SUMIFS('Events & Crew'!$AN$5:$AN$604,'Events & Crew'!$N$5:$N$604,$L5,'Events & Crew'!$F$5:$F$604,\"Completed\")+SUMIFS('Events & Crew'!$AO$5:$AO$604,'Events & Crew'!$O$5:$O$604,$L5,'Events & Crew'!$F$5:$F$604,\"Completed\")+SUMIFS('Events & Crew'!$AP$5:$AP$604,'Events & Crew'!$P$5:$P$604,$L5,'Events & Crew'!$F$5:$F$604,\"Completed\")+SUMIFS('Events & Crew'!$AQ$5:$AQ$604,'Events & Crew'!$Q$5:$Q$604,$L5,'Events & Crew'!$F$5:$F$604,\"Completed\")+SUMIFS('Events & Crew'!$AR$5:$AR$604,'Events & Crew'!$R$5:$R$604,$L5,'Events & Crew'!$F$5:$F$604,\"Completed\"))"
+      },
+      {
+        "cell": "R5",
+        "formula": "=IF($L5=\"\",\"\",SUMIFS('Crew Payments'!$E$5:$E$604,'Crew Payments'!$C$5:$C$604,$L5))"
+      },
+      {
+        "cell": "S5",
+        "formula": "=IF($L5=\"\",\"\",MAX(0,$Q5-$R5))"
+      },
+      {
+        "cell": "T5",
+        "formula": "=IF($L5=\"\",\"\",MAX(0,$R5-$Q5))"
+      },
+      {
+        "cell": "I6",
+        "formula": "=IF(B6=\"\",\"\",LEFT(B6,FIND(\" \",B6&\" \")-1))"
+      },
+      {
+        "cell": "J6",
+        "formula": "=IF(I6=\"\",\"\",I6&\"|\"&COUNTIF(I$5:I6,I6))"
+      },
+      {
+        "cell": "L6",
+        "formula": "=IF('Crew Directory'!A6=\"\",\"\",'Crew Directory'!A6)"
+      },
+      {
+        "cell": "M6",
+        "formula": "=IF($L6=\"\",\"\",IF('Crew Directory'!B6=\"\",\"\",'Crew Directory'!B6))"
+      },
+      {
+        "cell": "N6",
+        "formula": "=IF($L6=\"\",\"\",COUNTIFS('Events & Crew'!$G$5:$G$604,$L6,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+COUNTIFS('Events & Crew'!$H$5:$H$604,$L6,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+COUNTIFS('Events & Crew'!$I$5:$I$604,$L6,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+COUNTIFS('Events & Crew'!$J$5:$J$604,$L6,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+COUNTIFS('Events & Crew'!$K$5:$K$604,$L6,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+COUNTIFS('Events & Crew'!$L$5:$L$604,$L6,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+COUNTIFS('Events & Crew'!$M$5:$M$604,$L6,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+COUNTIFS('Events & Crew'!$N$5:$N$604,$L6,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+COUNTIFS('Events & Crew'!$O$5:$O$604,$L6,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+COUNTIFS('Events & Crew'!$P$5:$P$604,$L6,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+COUNTIFS('Events & Crew'!$Q$5:$Q$604,$L6,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+COUNTIFS('Events & Crew'!$R$5:$R$604,$L6,'Events & Crew'!$F$5:$F$604,\"<>Completed\"))"
+      },
+      {
+        "cell": "O6",
+        "formula": "=IF($L6=\"\",\"\",COUNTIFS('Events & Crew'!$G$5:$G$604,$L6,'Events & Crew'!$F$5:$F$604,\"Completed\")+COUNTIFS('Events & Crew'!$H$5:$H$604,$L6,'Events & Crew'!$F$5:$F$604,\"Completed\")+COUNTIFS('Events & Crew'!$I$5:$I$604,$L6,'Events & Crew'!$F$5:$F$604,\"Completed\")+COUNTIFS('Events & Crew'!$J$5:$J$604,$L6,'Events & Crew'!$F$5:$F$604,\"Completed\")+COUNTIFS('Events & Crew'!$K$5:$K$604,$L6,'Events & Crew'!$F$5:$F$604,\"Completed\")+COUNTIFS('Events & Crew'!$L$5:$L$604,$L6,'Events & Crew'!$F$5:$F$604,\"Completed\")+COUNTIFS('Events & Crew'!$M$5:$M$604,$L6,'Events & Crew'!$F$5:$F$604,\"Completed\")+COUNTIFS('Events & Crew'!$N$5:$N$604,$L6,'Events & Crew'!$F$5:$F$604,\"Completed\")+COUNTIFS('Events & Crew'!$O$5:$O$604,$L6,'Events & Crew'!$F$5:$F$604,\"Completed\")+COUNTIFS('Events & Crew'!$P$5:$P$604,$L6,'Events & Crew'!$F$5:$F$604,\"Completed\")+COUNTIFS('Events & Crew'!$Q$5:$Q$604,$L6,'Events & Crew'!$F$5:$F$604,\"Completed\")+COUNTIFS('Events & Crew'!$R$5:$R$604,$L6,'Events & Crew'!$F$5:$F$604,\"Completed\"))"
+      },
+      {
+        "cell": "P6",
+        "formula": "=IF($L6=\"\",\"\",SUMIFS('Events & Crew'!$AG$5:$AG$604,'Events & Crew'!$G$5:$G$604,$L6,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+SUMIFS('Events & Crew'!$AH$5:$AH$604,'Events & Crew'!$H$5:$H$604,$L6,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+SUMIFS('Events & Crew'!$AI$5:$AI$604,'Events & Crew'!$I$5:$I$604,$L6,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+SUMIFS('Events & Crew'!$AJ$5:$AJ$604,'Events & Crew'!$J$5:$J$604,$L6,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+SUMIFS('Events & Crew'!$AK$5:$AK$604,'Events & Crew'!$K$5:$K$604,$L6,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+SUMIFS('Events & Crew'!$AL$5:$AL$604,'Events & Crew'!$L$5:$L$604,$L6,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+SUMIFS('Events & Crew'!$AM$5:$AM$604,'Events & Crew'!$M$5:$M$604,$L6,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+SUMIFS('Events & Crew'!$AN$5:$AN$604,'Events & Crew'!$N$5:$N$604,$L6,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+SUMIFS('Events & Crew'!$AO$5:$AO$604,'Events & Crew'!$O$5:$O$604,$L6,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+SUMIFS('Events & Crew'!$AP$5:$AP$604,'Events & Crew'!$P$5:$P$604,$L6,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+SUMIFS('Events & Crew'!$AQ$5:$AQ$604,'Events & Crew'!$Q$5:$Q$604,$L6,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+SUMIFS('Events & Crew'!$AR$5:$AR$604,'Events & Crew'!$R$5:$R$604,$L6,'Events & Crew'!$F$5:$F$604,\"<>Completed\"))"
+      },
+      {
+        "cell": "Q6",
+        "formula": "=IF($L6=\"\",\"\",SUMIFS('Events & Crew'!$AG$5:$AG$604,'Events & Crew'!$G$5:$G$604,$L6,'Events & Crew'!$F$5:$F$604,\"Completed\")+SUMIFS('Events & Crew'!$AH$5:$AH$604,'Events & Crew'!$H$5:$H$604,$L6,'Events & Crew'!$F$5:$F$604,\"Completed\")+SUMIFS('Events & Crew'!$AI$5:$AI$604,'Events & Crew'!$I$5:$I$604,$L6,'Events & Crew'!$F$5:$F$604,\"Completed\")+SUMIFS('Events & Crew'!$AJ$5:$AJ$604,'Events & Crew'!$J$5:$J$604,$L6,'Events & Crew'!$F$5:$F$604,\"Completed\")+SUMIFS('Events & Crew'!$AK$5:$AK$604,'Events & Crew'!$K$5:$K$604,$L6,'Events & Crew'!$F$5:$F$604,\"Completed\")+SUMIFS('Events & Crew'!$AL$5:$AL$604,'Events & Crew'!$L$5:$L$604,$L6,'Events & Crew'!$F$5:$F$604,\"Completed\")+SUMIFS('Events & Crew'!$AM$5:$AM$604,'Events & Crew'!$M$5:$M$604,$L6,'Events & Crew'!$F$5:$F$604,\"Completed\")+SUMIFS('Events & Crew'!$AN$5:$AN$604,'Events & Crew'!$N$5:$N$604,$L6,'Events & Crew'!$F$5:$F$604,\"Completed\")+SUMIFS('Events & Crew'!$AO$5:$AO$604,'Events & Crew'!$O$5:$O$604,$L6,'Events & Crew'!$F$5:$F$604,\"Completed\")+SUMIFS('Events & Crew'!$AP$5:$AP$604,'Events & Crew'!$P$5:$P$604,$L6,'Events & Crew'!$F$5:$F$604,\"Completed\")+SUMIFS('Events & Crew'!$AQ$5:$AQ$604,'Events & Crew'!$Q$5:$Q$604,$L6,'Events & Crew'!$F$5:$F$604,\"Completed\")+SUMIFS('Events & Crew'!$AR$5:$AR$604,'Events & Crew'!$R$5:$R$604,$L6,'Events & Crew'!$F$5:$F$604,\"Completed\"))"
+      },
+      {
+        "cell": "R6",
+        "formula": "=IF($L6=\"\",\"\",SUMIFS('Crew Payments'!$E$5:$E$604,'Crew Payments'!$C$5:$C$604,$L6))"
+      },
+      {
+        "cell": "S6",
+        "formula": "=IF($L6=\"\",\"\",MAX(0,$Q6-$R6))"
+      },
+      {
+        "cell": "T6",
+        "formula": "=IF($L6=\"\",\"\",MAX(0,$R6-$Q6))"
+      },
+      {
+        "cell": "I7",
+        "formula": "=IF(B7=\"\",\"\",LEFT(B7,FIND(\" \",B7&\" \")-1))"
+      },
+      {
+        "cell": "J7",
+        "formula": "=IF(I7=\"\",\"\",I7&\"|\"&COUNTIF(I$5:I7,I7))"
+      },
+      {
+        "cell": "L7",
+        "formula": "=IF('Crew Directory'!A7=\"\",\"\",'Crew Directory'!A7)"
+      },
+      {
+        "cell": "M7",
+        "formula": "=IF($L7=\"\",\"\",IF('Crew Directory'!B7=\"\",\"\",'Crew Directory'!B7))"
+      },
+      {
+        "cell": "N7",
+        "formula": "=IF($L7=\"\",\"\",COUNTIFS('Events & Crew'!$G$5:$G$604,$L7,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+COUNTIFS('Events & Crew'!$H$5:$H$604,$L7,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+COUNTIFS('Events & Crew'!$I$5:$I$604,$L7,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+COUNTIFS('Events & Crew'!$J$5:$J$604,$L7,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+COUNTIFS('Events & Crew'!$K$5:$K$604,$L7,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+COUNTIFS('Events & Crew'!$L$5:$L$604,$L7,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+COUNTIFS('Events & Crew'!$M$5:$M$604,$L7,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+COUNTIFS('Events & Crew'!$N$5:$N$604,$L7,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+COUNTIFS('Events & Crew'!$O$5:$O$604,$L7,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+COUNTIFS('Events & Crew'!$P$5:$P$604,$L7,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+COUNTIFS('Events & Crew'!$Q$5:$Q$604,$L7,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+COUNTIFS('Events & Crew'!$R$5:$R$604,$L7,'Events & Crew'!$F$5:$F$604,\"<>Completed\"))"
+      },
+      {
+        "cell": "O7",
+        "formula": "=IF($L7=\"\",\"\",COUNTIFS('Events & Crew'!$G$5:$G$604,$L7,'Events & Crew'!$F$5:$F$604,\"Completed\")+COUNTIFS('Events & Crew'!$H$5:$H$604,$L7,'Events & Crew'!$F$5:$F$604,\"Completed\")+COUNTIFS('Events & Crew'!$I$5:$I$604,$L7,'Events & Crew'!$F$5:$F$604,\"Completed\")+COUNTIFS('Events & Crew'!$J$5:$J$604,$L7,'Events & Crew'!$F$5:$F$604,\"Completed\")+COUNTIFS('Events & Crew'!$K$5:$K$604,$L7,'Events & Crew'!$F$5:$F$604,\"Completed\")+COUNTIFS('Events & Crew'!$L$5:$L$604,$L7,'Events & Crew'!$F$5:$F$604,\"Completed\")+COUNTIFS('Events & Crew'!$M$5:$M$604,$L7,'Events & Crew'!$F$5:$F$604,\"Completed\")+COUNTIFS('Events & Crew'!$N$5:$N$604,$L7,'Events & Crew'!$F$5:$F$604,\"Completed\")+COUNTIFS('Events & Crew'!$O$5:$O$604,$L7,'Events & Crew'!$F$5:$F$604,\"Completed\")+COUNTIFS('Events & Crew'!$P$5:$P$604,$L7,'Events & Crew'!$F$5:$F$604,\"Completed\")+COUNTIFS('Events & Crew'!$Q$5:$Q$604,$L7,'Events & Crew'!$F$5:$F$604,\"Completed\")+COUNTIFS('Events & Crew'!$R$5:$R$604,$L7,'Events & Crew'!$F$5:$F$604,\"Completed\"))"
+      },
+      {
+        "cell": "P7",
+        "formula": "=IF($L7=\"\",\"\",SUMIFS('Events & Crew'!$AG$5:$AG$604,'Events & Crew'!$G$5:$G$604,$L7,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+SUMIFS('Events & Crew'!$AH$5:$AH$604,'Events & Crew'!$H$5:$H$604,$L7,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+SUMIFS('Events & Crew'!$AI$5:$AI$604,'Events & Crew'!$I$5:$I$604,$L7,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+SUMIFS('Events & Crew'!$AJ$5:$AJ$604,'Events & Crew'!$J$5:$J$604,$L7,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+SUMIFS('Events & Crew'!$AK$5:$AK$604,'Events & Crew'!$K$5:$K$604,$L7,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+SUMIFS('Events & Crew'!$AL$5:$AL$604,'Events & Crew'!$L$5:$L$604,$L7,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+SUMIFS('Events & Crew'!$AM$5:$AM$604,'Events & Crew'!$M$5:$M$604,$L7,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+SUMIFS('Events & Crew'!$AN$5:$AN$604,'Events & Crew'!$N$5:$N$604,$L7,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+SUMIFS('Events & Crew'!$AO$5:$AO$604,'Events & Crew'!$O$5:$O$604,$L7,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+SUMIFS('Events & Crew'!$AP$5:$AP$604,'Events & Crew'!$P$5:$P$604,$L7,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+SUMIFS('Events & Crew'!$AQ$5:$AQ$604,'Events & Crew'!$Q$5:$Q$604,$L7,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+SUMIFS('Events & Crew'!$AR$5:$AR$604,'Events & Crew'!$R$5:$R$604,$L7,'Events & Crew'!$F$5:$F$604,\"<>Completed\"))"
+      },
+      {
+        "cell": "Q7",
+        "formula": "=IF($L7=\"\",\"\",SUMIFS('Events & Crew'!$AG$5:$AG$604,'Events & Crew'!$G$5:$G$604,$L7,'Events & Crew'!$F$5:$F$604,\"Completed\")+SUMIFS('Events & Crew'!$AH$5:$AH$604,'Events & Crew'!$H$5:$H$604,$L7,'Events & Crew'!$F$5:$F$604,\"Completed\")+SUMIFS('Events & Crew'!$AI$5:$AI$604,'Events & Crew'!$I$5:$I$604,$L7,'Events & Crew'!$F$5:$F$604,\"Completed\")+SUMIFS('Events & Crew'!$AJ$5:$AJ$604,'Events & Crew'!$J$5:$J$604,$L7,'Events & Crew'!$F$5:$F$604,\"Completed\")+SUMIFS('Events & Crew'!$AK$5:$AK$604,'Events & Crew'!$K$5:$K$604,$L7,'Events & Crew'!$F$5:$F$604,\"Completed\")+SUMIFS('Events & Crew'!$AL$5:$AL$604,'Events & Crew'!$L$5:$L$604,$L7,'Events & Crew'!$F$5:$F$604,\"Completed\")+SUMIFS('Events & Crew'!$AM$5:$AM$604,'Events & Crew'!$M$5:$M$604,$L7,'Events & Crew'!$F$5:$F$604,\"Completed\")+SUMIFS('Events & Crew'!$AN$5:$AN$604,'Events & Crew'!$N$5:$N$604,$L7,'Events & Crew'!$F$5:$F$604,\"Completed\")+SUMIFS('Events & Crew'!$AO$5:$AO$604,'Events & Crew'!$O$5:$O$604,$L7,'Events & Crew'!$F$5:$F$604,\"Completed\")+SUMIFS('Events & Crew'!$AP$5:$AP$604,'Events & Crew'!$P$5:$P$604,$L7,'Events & Crew'!$F$5:$F$604,\"Completed\")+SUMIFS('Events & Crew'!$AQ$5:$AQ$604,'Events & Crew'!$Q$5:$Q$604,$L7,'Events & Crew'!$F$5:$F$604,\"Completed\")+SUMIFS('Events & Crew'!$AR$5:$AR$604,'Events & Crew'!$R$5:$R$604,$L7,'Events & Crew'!$F$5:$F$604,\"Completed\"))"
+      },
+      {
+        "cell": "R7",
+        "formula": "=IF($L7=\"\",\"\",SUMIFS('Crew Payments'!$E$5:$E$604,'Crew Payments'!$C$5:$C$604,$L7))"
+      },
+      {
+        "cell": "S7",
+        "formula": "=IF($L7=\"\",\"\",MAX(0,$Q7-$R7))"
+      },
+      {
+        "cell": "T7",
+        "formula": "=IF($L7=\"\",\"\",MAX(0,$R7-$Q7))"
+      },
+      {
+        "cell": "I8",
+        "formula": "=IF(B8=\"\",\"\",LEFT(B8,FIND(\" \",B8&\" \")-1))"
+      },
+      {
+        "cell": "J8",
+        "formula": "=IF(I8=\"\",\"\",I8&\"|\"&COUNTIF(I$5:I8,I8))"
+      },
+      {
+        "cell": "L8",
+        "formula": "=IF('Crew Directory'!A8=\"\",\"\",'Crew Directory'!A8)"
+      },
+      {
+        "cell": "M8",
+        "formula": "=IF($L8=\"\",\"\",IF('Crew Directory'!B8=\"\",\"\",'Crew Directory'!B8))"
+      },
+      {
+        "cell": "N8",
+        "formula": "=IF($L8=\"\",\"\",COUNTIFS('Events & Crew'!$G$5:$G$604,$L8,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+COUNTIFS('Events & Crew'!$H$5:$H$604,$L8,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+COUNTIFS('Events & Crew'!$I$5:$I$604,$L8,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+COUNTIFS('Events & Crew'!$J$5:$J$604,$L8,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+COUNTIFS('Events & Crew'!$K$5:$K$604,$L8,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+COUNTIFS('Events & Crew'!$L$5:$L$604,$L8,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+COUNTIFS('Events & Crew'!$M$5:$M$604,$L8,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+COUNTIFS('Events & Crew'!$N$5:$N$604,$L8,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+COUNTIFS('Events & Crew'!$O$5:$O$604,$L8,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+COUNTIFS('Events & Crew'!$P$5:$P$604,$L8,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+COUNTIFS('Events & Crew'!$Q$5:$Q$604,$L8,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+COUNTIFS('Events & Crew'!$R$5:$R$604,$L8,'Events & Crew'!$F$5:$F$604,\"<>Completed\"))"
+      },
+      {
+        "cell": "O8",
+        "formula": "=IF($L8=\"\",\"\",COUNTIFS('Events & Crew'!$G$5:$G$604,$L8,'Events & Crew'!$F$5:$F$604,\"Completed\")+COUNTIFS('Events & Crew'!$H$5:$H$604,$L8,'Events & Crew'!$F$5:$F$604,\"Completed\")+COUNTIFS('Events & Crew'!$I$5:$I$604,$L8,'Events & Crew'!$F$5:$F$604,\"Completed\")+COUNTIFS('Events & Crew'!$J$5:$J$604,$L8,'Events & Crew'!$F$5:$F$604,\"Completed\")+COUNTIFS('Events & Crew'!$K$5:$K$604,$L8,'Events & Crew'!$F$5:$F$604,\"Completed\")+COUNTIFS('Events & Crew'!$L$5:$L$604,$L8,'Events & Crew'!$F$5:$F$604,\"Completed\")+COUNTIFS('Events & Crew'!$M$5:$M$604,$L8,'Events & Crew'!$F$5:$F$604,\"Completed\")+COUNTIFS('Events & Crew'!$N$5:$N$604,$L8,'Events & Crew'!$F$5:$F$604,\"Completed\")+COUNTIFS('Events & Crew'!$O$5:$O$604,$L8,'Events & Crew'!$F$5:$F$604,\"Completed\")+COUNTIFS('Events & Crew'!$P$5:$P$604,$L8,'Events & Crew'!$F$5:$F$604,\"Completed\")+COUNTIFS('Events & Crew'!$Q$5:$Q$604,$L8,'Events & Crew'!$F$5:$F$604,\"Completed\")+COUNTIFS('Events & Crew'!$R$5:$R$604,$L8,'Events & Crew'!$F$5:$F$604,\"Completed\"))"
+      },
+      {
+        "cell": "P8",
+        "formula": "=IF($L8=\"\",\"\",SUMIFS('Events & Crew'!$AG$5:$AG$604,'Events & Crew'!$G$5:$G$604,$L8,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+SUMIFS('Events & Crew'!$AH$5:$AH$604,'Events & Crew'!$H$5:$H$604,$L8,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+SUMIFS('Events & Crew'!$AI$5:$AI$604,'Events & Crew'!$I$5:$I$604,$L8,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+SUMIFS('Events & Crew'!$AJ$5:$AJ$604,'Events & Crew'!$J$5:$J$604,$L8,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+SUMIFS('Events & Crew'!$AK$5:$AK$604,'Events & Crew'!$K$5:$K$604,$L8,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+SUMIFS('Events & Crew'!$AL$5:$AL$604,'Events & Crew'!$L$5:$L$604,$L8,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+SUMIFS('Events & Crew'!$AM$5:$AM$604,'Events & Crew'!$M$5:$M$604,$L8,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+SUMIFS('Events & Crew'!$AN$5:$AN$604,'Events & Crew'!$N$5:$N$604,$L8,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+SUMIFS('Events & Crew'!$AO$5:$AO$604,'Events & Crew'!$O$5:$O$604,$L8,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+SUMIFS('Events & Crew'!$AP$5:$AP$604,'Events & Crew'!$P$5:$P$604,$L8,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+SUMIFS('Events & Crew'!$AQ$5:$AQ$604,'Events & Crew'!$Q$5:$Q$604,$L8,'Events & Crew'!$F$5:$F$604,\"<>Completed\")+SUMIFS('Events & Crew'!$AR$5:$AR$604,'Events & Crew'!$R$5:$R$604,$L8,'Events & Crew'!$F$5:$F$604,\"<>Completed\"))"
+      },
+      {
+        "cell": "Q8",
+        "formula": "=IF($L8=\"\",\"\",SUMIFS('Events & Crew'!$AG$5:$AG$604,'Events & Crew'!$G$5:$G$604,$L8,'Events & Crew'!$F$5:$F$604,\"Completed\")+SUMIFS('Events & Crew'!$AH$5:$AH$604,'Events & Crew'!$H$5:$H$604,$L8,'Events & Crew'!$F$5:$F$604,\"Completed\")+SUMIFS('Events & Crew'!$AI$5:$AI$604,'Events & Crew'!$I$5:$I$604,$L8,'Events & Crew'!$F$5:$F$604,\"Completed\")+SUMIFS('Events & Crew'!$AJ$5:$AJ$604,'Events & Crew'!$J$5:$J$604,$L8,'Events & Crew'!$F$5:$F$604,\"Completed\")+SUMIFS('Events & Crew'!$AK$5:$AK$604,'Events & Crew'!$K$5:$K$604,$L8,'Events & Crew'!$F$5:$F$604,\"Completed\")+SUMIFS('Events & Crew'!$AL$5:$AL$604,'Events & Crew'!$L$5:$L$604,$L8,'Events & Crew'!$F$5:$F$604,\"Completed\")+SUMIFS('Events & Crew'!$AM$5:$AM$604,'Events & Crew'!$M$5:$M$604,$L8,'Events & Crew'!$F$5:$F$604,\"Completed\")+SUMIFS('Events & Crew'!$AN$5:$AN$604,'Events & Crew'!$N$5:$N$604,$L8,'Events & Crew'!$F$5:$F$604,\"Completed\")+SUMIFS('Events & Crew'!$AO$5:$AO$604,'Events & Crew'!$O$5:$O$604,$L8,'Events & Crew'!$F$5:$F$604,\"Completed\")+SUMIFS('Events & Crew'!$AP$5:$AP$604,'Events & Crew'!$P$5:$P$604,$L8,'Events & Crew'!$F$5:$F$604,\"Completed\")+SUMIFS('Events & Crew'!$AQ$5:$AQ$604,'Events & Crew'!$Q$5:$Q$604,$L8,'Events & Crew'!$F$5:$F$604,\"Completed\")+SUMIFS('Events & Crew'!$AR$5:$AR$604,'Events & Crew'!$R$5:$R$604,$L8,'Events & Crew'!$F$5:$F$604,\"Completed\"))"
+      },
+      {
+        "cell": "R8",
+        "formula": "=IF($L8=\"\",\"\",SUMIFS('Crew Payments'!$E$5:$E$604,'Crew Payments'!$C$5:$C$604,$L8))"
+      },
+      {
+        "cell": "S8",
+        "formula": "=IF($L8=\"\",\"\",MAX(0,$Q8-$R8))"
+      },
+      {
+        "cell": "T8",
+        "formula": "=IF($L8=\"\",\"\",MAX(0,$R8-$Q8))"
+      }
+    ],
+    "validation": [
+      {
+        "range": "A5:A604",
+        "formula": "43831",
+        "type": "date"
+      },
+      {
+        "range": "B5:B604",
+        "formula": "Setup!$W$5:$W$154",
+        "type": "list"
+      },
+      {
+        "range": "C5:C604",
+        "formula": "'Crew Directory'!$A$5:$A$104",
+        "type": "list"
+      },
+      {
+        "range": "D5:D604",
+        "formula": "Setup!$S$5:$S$24",
+        "type": "list"
+      },
+      {
+        "range": "F5:F604",
+        "formula": "Setup!$I$5:$I$24",
+        "type": "list"
+      }
+    ]
+  },
+  {
+    "sheet": "Deliverables",
+    "dimensions": "A1:K604",
+    "state": "visible",
+    "headers": {
+      "A4": "Client (pick from list)",
+      "B4": "Deliverable",
+      "C4": "Details / Specification",
+      "D4": "Qty",
+      "E4": "Promised Date",
+      "F4": "Delivered Date",
+      "G4": "Status",
+      "H4": "Days Overdue (auto)",
+      "I4": "Notes",
+      "J4": "ID",
+      "K4": "Key"
+    },
+    "hiddenColumns": [
+      "J"
+    ],
+    "hiddenRows": [],
+    "formulaCount": 1800,
+    "formulaExamples": [
+      {
+        "cell": "H5",
+        "formula": "=IF(OR(J5=\"\",E5=\"\",F5<>\"\",G5=\"Delivered\"),\"\",MAX(0,TODAY()-E5))"
+      },
+      {
+        "cell": "J5",
+        "formula": "=IF(A5=\"\",\"\",LEFT(A5,FIND(\" \",A5&\" \")-1))"
+      },
+      {
+        "cell": "K5",
+        "formula": "=IF(J5=\"\",\"\",J5&\"|\"&COUNTIF(J$5:J5,J5))"
+      },
+      {
+        "cell": "H6",
+        "formula": "=IF(OR(J6=\"\",E6=\"\",F6<>\"\",G6=\"Delivered\"),\"\",MAX(0,TODAY()-E6))"
+      },
+      {
+        "cell": "J6",
+        "formula": "=IF(A6=\"\",\"\",LEFT(A6,FIND(\" \",A6&\" \")-1))"
+      },
+      {
+        "cell": "K6",
+        "formula": "=IF(J6=\"\",\"\",J6&\"|\"&COUNTIF(J$5:J6,J6))"
+      },
+      {
+        "cell": "H7",
+        "formula": "=IF(OR(J7=\"\",E7=\"\",F7<>\"\",G7=\"Delivered\"),\"\",MAX(0,TODAY()-E7))"
+      },
+      {
+        "cell": "J7",
+        "formula": "=IF(A7=\"\",\"\",LEFT(A7,FIND(\" \",A7&\" \")-1))"
+      },
+      {
+        "cell": "K7",
+        "formula": "=IF(J7=\"\",\"\",J7&\"|\"&COUNTIF(J$5:J7,J7))"
+      },
+      {
+        "cell": "H8",
+        "formula": "=IF(OR(J8=\"\",E8=\"\",F8<>\"\",G8=\"Delivered\"),\"\",MAX(0,TODAY()-E8))"
+      },
+      {
+        "cell": "J8",
+        "formula": "=IF(A8=\"\",\"\",LEFT(A8,FIND(\" \",A8&\" \")-1))"
+      },
+      {
+        "cell": "K8",
+        "formula": "=IF(J8=\"\",\"\",J8&\"|\"&COUNTIF(J$5:J8,J8))"
+      },
+      {
+        "cell": "H9",
+        "formula": "=IF(OR(J9=\"\",E9=\"\",F9<>\"\",G9=\"Delivered\"),\"\",MAX(0,TODAY()-E9))"
+      },
+      {
+        "cell": "J9",
+        "formula": "=IF(A9=\"\",\"\",LEFT(A9,FIND(\" \",A9&\" \")-1))"
+      },
+      {
+        "cell": "K9",
+        "formula": "=IF(J9=\"\",\"\",J9&\"|\"&COUNTIF(J$5:J9,J9))"
+      },
+      {
+        "cell": "H10",
+        "formula": "=IF(OR(J10=\"\",E10=\"\",F10<>\"\",G10=\"Delivered\"),\"\",MAX(0,TODAY()-E10))"
+      },
+      {
+        "cell": "J10",
+        "formula": "=IF(A10=\"\",\"\",LEFT(A10,FIND(\" \",A10&\" \")-1))"
+      },
+      {
+        "cell": "K10",
+        "formula": "=IF(J10=\"\",\"\",J10&\"|\"&COUNTIF(J$5:J10,J10))"
+      },
+      {
+        "cell": "H11",
+        "formula": "=IF(OR(J11=\"\",E11=\"\",F11<>\"\",G11=\"Delivered\"),\"\",MAX(0,TODAY()-E11))"
+      },
+      {
+        "cell": "J11",
+        "formula": "=IF(A11=\"\",\"\",LEFT(A11,FIND(\" \",A11&\" \")-1))"
+      },
+      {
+        "cell": "K11",
+        "formula": "=IF(J11=\"\",\"\",J11&\"|\"&COUNTIF(J$5:J11,J11))"
+      },
+      {
+        "cell": "H12",
+        "formula": "=IF(OR(J12=\"\",E12=\"\",F12<>\"\",G12=\"Delivered\"),\"\",MAX(0,TODAY()-E12))"
+      },
+      {
+        "cell": "J12",
+        "formula": "=IF(A12=\"\",\"\",LEFT(A12,FIND(\" \",A12&\" \")-1))"
+      },
+      {
+        "cell": "K12",
+        "formula": "=IF(J12=\"\",\"\",J12&\"|\"&COUNTIF(J$5:J12,J12))"
+      },
+      {
+        "cell": "H13",
+        "formula": "=IF(OR(J13=\"\",E13=\"\",F13<>\"\",G13=\"Delivered\"),\"\",MAX(0,TODAY()-E13))"
+      },
+      {
+        "cell": "J13",
+        "formula": "=IF(A13=\"\",\"\",LEFT(A13,FIND(\" \",A13&\" \")-1))"
+      },
+      {
+        "cell": "K13",
+        "formula": "=IF(J13=\"\",\"\",J13&\"|\"&COUNTIF(J$5:J13,J13))"
+      },
+      {
+        "cell": "H14",
+        "formula": "=IF(OR(J14=\"\",E14=\"\",F14<>\"\",G14=\"Delivered\"),\"\",MAX(0,TODAY()-E14))"
+      },
+      {
+        "cell": "J14",
+        "formula": "=IF(A14=\"\",\"\",LEFT(A14,FIND(\" \",A14&\" \")-1))"
+      },
+      {
+        "cell": "K14",
+        "formula": "=IF(J14=\"\",\"\",J14&\"|\"&COUNTIF(J$5:J14,J14))"
+      },
+      {
+        "cell": "H15",
+        "formula": "=IF(OR(J15=\"\",E15=\"\",F15<>\"\",G15=\"Delivered\"),\"\",MAX(0,TODAY()-E15))"
+      },
+      {
+        "cell": "J15",
+        "formula": "=IF(A15=\"\",\"\",LEFT(A15,FIND(\" \",A15&\" \")-1))"
+      },
+      {
+        "cell": "K15",
+        "formula": "=IF(J15=\"\",\"\",J15&\"|\"&COUNTIF(J$5:J15,J15))"
+      },
+      {
+        "cell": "H16",
+        "formula": "=IF(OR(J16=\"\",E16=\"\",F16<>\"\",G16=\"Delivered\"),\"\",MAX(0,TODAY()-E16))"
+      },
+      {
+        "cell": "J16",
+        "formula": "=IF(A16=\"\",\"\",LEFT(A16,FIND(\" \",A16&\" \")-1))"
+      },
+      {
+        "cell": "K16",
+        "formula": "=IF(J16=\"\",\"\",J16&\"|\"&COUNTIF(J$5:J16,J16))"
+      },
+      {
+        "cell": "H17",
+        "formula": "=IF(OR(J17=\"\",E17=\"\",F17<>\"\",G17=\"Delivered\"),\"\",MAX(0,TODAY()-E17))"
+      },
+      {
+        "cell": "J17",
+        "formula": "=IF(A17=\"\",\"\",LEFT(A17,FIND(\" \",A17&\" \")-1))"
+      },
+      {
+        "cell": "K17",
+        "formula": "=IF(J17=\"\",\"\",J17&\"|\"&COUNTIF(J$5:J17,J17))"
+      },
+      {
+        "cell": "H18",
+        "formula": "=IF(OR(J18=\"\",E18=\"\",F18<>\"\",G18=\"Delivered\"),\"\",MAX(0,TODAY()-E18))"
+      },
+      {
+        "cell": "J18",
+        "formula": "=IF(A18=\"\",\"\",LEFT(A18,FIND(\" \",A18&\" \")-1))"
+      },
+      {
+        "cell": "K18",
+        "formula": "=IF(J18=\"\",\"\",J18&\"|\"&COUNTIF(J$5:J18,J18))"
+      },
+      {
+        "cell": "H19",
+        "formula": "=IF(OR(J19=\"\",E19=\"\",F19<>\"\",G19=\"Delivered\"),\"\",MAX(0,TODAY()-E19))"
+      },
+      {
+        "cell": "J19",
+        "formula": "=IF(A19=\"\",\"\",LEFT(A19,FIND(\" \",A19&\" \")-1))"
+      }
+    ],
+    "validation": [
+      {
+        "range": "E5:F604",
+        "formula": "43831",
+        "type": "date"
+      },
+      {
+        "range": "A5:A604",
+        "formula": "Setup!$W$5:$W$154",
+        "type": "list"
+      },
+      {
+        "range": "B5:B604",
+        "formula": "Setup!$K$5:$K$24",
+        "type": "list"
+      },
+      {
+        "range": "G5:G604",
+        "formula": "Setup!$L$5:$L$24",
+        "type": "list"
+      }
+    ]
+  },
+  {
+    "sheet": "Albums",
+    "dimensions": "A1:Q304",
+    "state": "visible",
+    "headers": {
+      "A4": "Client (pick from list)",
+      "B4": "Album Name",
+      "C4": "Album Style",
+      "D4": "Size",
+      "E4": "Sheets / Pages",
+      "F4": "Cover / Material",
+      "G4": "Copies",
+      "H4": "Designer",
+      "I4": "Printer",
+      "J4": "Photo Selection Sent",
+      "K4": "Design Approved",
+      "L4": "Sent to Print",
+      "M4": "Delivered to Client",
+      "N4": "Status",
+      "O4": "Notes",
+      "P4": "ID",
+      "Q4": "Key"
+    },
+    "hiddenColumns": [
+      "P"
+    ],
+    "hiddenRows": [],
+    "formulaCount": 600,
+    "formulaExamples": [
+      {
+        "cell": "P5",
+        "formula": "=IF(A5=\"\",\"\",LEFT(A5,FIND(\" \",A5&\" \")-1))"
+      },
+      {
+        "cell": "Q5",
+        "formula": "=IF(P5=\"\",\"\",P5&\"|\"&COUNTIF(P$5:P5,P5))"
+      },
+      {
+        "cell": "P6",
+        "formula": "=IF(A6=\"\",\"\",LEFT(A6,FIND(\" \",A6&\" \")-1))"
+      },
+      {
+        "cell": "Q6",
+        "formula": "=IF(P6=\"\",\"\",P6&\"|\"&COUNTIF(P$5:P6,P6))"
+      },
+      {
+        "cell": "P7",
+        "formula": "=IF(A7=\"\",\"\",LEFT(A7,FIND(\" \",A7&\" \")-1))"
+      },
+      {
+        "cell": "Q7",
+        "formula": "=IF(P7=\"\",\"\",P7&\"|\"&COUNTIF(P$5:P7,P7))"
+      },
+      {
+        "cell": "P8",
+        "formula": "=IF(A8=\"\",\"\",LEFT(A8,FIND(\" \",A8&\" \")-1))"
+      },
+      {
+        "cell": "Q8",
+        "formula": "=IF(P8=\"\",\"\",P8&\"|\"&COUNTIF(P$5:P8,P8))"
+      },
+      {
+        "cell": "P9",
+        "formula": "=IF(A9=\"\",\"\",LEFT(A9,FIND(\" \",A9&\" \")-1))"
+      },
+      {
+        "cell": "Q9",
+        "formula": "=IF(P9=\"\",\"\",P9&\"|\"&COUNTIF(P$5:P9,P9))"
+      },
+      {
+        "cell": "P10",
+        "formula": "=IF(A10=\"\",\"\",LEFT(A10,FIND(\" \",A10&\" \")-1))"
+      },
+      {
+        "cell": "Q10",
+        "formula": "=IF(P10=\"\",\"\",P10&\"|\"&COUNTIF(P$5:P10,P10))"
+      },
+      {
+        "cell": "P11",
+        "formula": "=IF(A11=\"\",\"\",LEFT(A11,FIND(\" \",A11&\" \")-1))"
+      },
+      {
+        "cell": "Q11",
+        "formula": "=IF(P11=\"\",\"\",P11&\"|\"&COUNTIF(P$5:P11,P11))"
+      },
+      {
+        "cell": "P12",
+        "formula": "=IF(A12=\"\",\"\",LEFT(A12,FIND(\" \",A12&\" \")-1))"
+      },
+      {
+        "cell": "Q12",
+        "formula": "=IF(P12=\"\",\"\",P12&\"|\"&COUNTIF(P$5:P12,P12))"
+      },
+      {
+        "cell": "P13",
+        "formula": "=IF(A13=\"\",\"\",LEFT(A13,FIND(\" \",A13&\" \")-1))"
+      },
+      {
+        "cell": "Q13",
+        "formula": "=IF(P13=\"\",\"\",P13&\"|\"&COUNTIF(P$5:P13,P13))"
+      },
+      {
+        "cell": "P14",
+        "formula": "=IF(A14=\"\",\"\",LEFT(A14,FIND(\" \",A14&\" \")-1))"
+      },
+      {
+        "cell": "Q14",
+        "formula": "=IF(P14=\"\",\"\",P14&\"|\"&COUNTIF(P$5:P14,P14))"
+      },
+      {
+        "cell": "P15",
+        "formula": "=IF(A15=\"\",\"\",LEFT(A15,FIND(\" \",A15&\" \")-1))"
+      },
+      {
+        "cell": "Q15",
+        "formula": "=IF(P15=\"\",\"\",P15&\"|\"&COUNTIF(P$5:P15,P15))"
+      },
+      {
+        "cell": "P16",
+        "formula": "=IF(A16=\"\",\"\",LEFT(A16,FIND(\" \",A16&\" \")-1))"
+      },
+      {
+        "cell": "Q16",
+        "formula": "=IF(P16=\"\",\"\",P16&\"|\"&COUNTIF(P$5:P16,P16))"
+      },
+      {
+        "cell": "P17",
+        "formula": "=IF(A17=\"\",\"\",LEFT(A17,FIND(\" \",A17&\" \")-1))"
+      },
+      {
+        "cell": "Q17",
+        "formula": "=IF(P17=\"\",\"\",P17&\"|\"&COUNTIF(P$5:P17,P17))"
+      },
+      {
+        "cell": "P18",
+        "formula": "=IF(A18=\"\",\"\",LEFT(A18,FIND(\" \",A18&\" \")-1))"
+      },
+      {
+        "cell": "Q18",
+        "formula": "=IF(P18=\"\",\"\",P18&\"|\"&COUNTIF(P$5:P18,P18))"
+      },
+      {
+        "cell": "P19",
+        "formula": "=IF(A19=\"\",\"\",LEFT(A19,FIND(\" \",A19&\" \")-1))"
+      },
+      {
+        "cell": "Q19",
+        "formula": "=IF(P19=\"\",\"\",P19&\"|\"&COUNTIF(P$5:P19,P19))"
+      },
+      {
+        "cell": "P20",
+        "formula": "=IF(A20=\"\",\"\",LEFT(A20,FIND(\" \",A20&\" \")-1))"
+      },
+      {
+        "cell": "Q20",
+        "formula": "=IF(P20=\"\",\"\",P20&\"|\"&COUNTIF(P$5:P20,P20))"
+      },
+      {
+        "cell": "P21",
+        "formula": "=IF(A21=\"\",\"\",LEFT(A21,FIND(\" \",A21&\" \")-1))"
+      },
+      {
+        "cell": "Q21",
+        "formula": "=IF(P21=\"\",\"\",P21&\"|\"&COUNTIF(P$5:P21,P21))"
+      },
+      {
+        "cell": "P22",
+        "formula": "=IF(A22=\"\",\"\",LEFT(A22,FIND(\" \",A22&\" \")-1))"
+      },
+      {
+        "cell": "Q22",
+        "formula": "=IF(P22=\"\",\"\",P22&\"|\"&COUNTIF(P$5:P22,P22))"
+      },
+      {
+        "cell": "P23",
+        "formula": "=IF(A23=\"\",\"\",LEFT(A23,FIND(\" \",A23&\" \")-1))"
+      },
+      {
+        "cell": "Q23",
+        "formula": "=IF(P23=\"\",\"\",P23&\"|\"&COUNTIF(P$5:P23,P23))"
+      },
+      {
+        "cell": "P24",
+        "formula": "=IF(A24=\"\",\"\",LEFT(A24,FIND(\" \",A24&\" \")-1))"
+      },
+      {
+        "cell": "Q24",
+        "formula": "=IF(P24=\"\",\"\",P24&\"|\"&COUNTIF(P$5:P24,P24))"
+      },
+      {
+        "cell": "P25",
+        "formula": "=IF(A25=\"\",\"\",LEFT(A25,FIND(\" \",A25&\" \")-1))"
+      },
+      {
+        "cell": "Q25",
+        "formula": "=IF(P25=\"\",\"\",P25&\"|\"&COUNTIF(P$5:P25,P25))"
+      },
+      {
+        "cell": "P26",
+        "formula": "=IF(A26=\"\",\"\",LEFT(A26,FIND(\" \",A26&\" \")-1))"
+      },
+      {
+        "cell": "Q26",
+        "formula": "=IF(P26=\"\",\"\",P26&\"|\"&COUNTIF(P$5:P26,P26))"
+      }
+    ],
+    "validation": [
+      {
+        "range": "J5:M304",
+        "formula": "43831",
+        "type": "date"
+      },
+      {
+        "range": "A5:A304",
+        "formula": "Setup!$W$5:$W$154",
+        "type": "list"
+      },
+      {
+        "range": "C5:C304",
+        "formula": "Setup!$N$5:$N$24",
+        "type": "list"
+      },
+      {
+        "range": "H5:H304",
+        "formula": "'Vendor Directory'!$A$5:$A$64",
+        "type": "list"
+      },
+      {
+        "range": "I5:I304",
+        "formula": "'Vendor Directory'!$A$5:$A$64",
+        "type": "list"
+      },
+      {
+        "range": "N5:N304",
+        "formula": "Setup!$O$5:$O$24",
+        "type": "list"
+      }
+    ]
+  },
+  {
+    "sheet": "Post-Production",
+    "dimensions": "A1:Q604",
+    "state": "visible",
+    "headers": {
+      "A4": "Client (pick from list)",
+      "B4": "Work Type",
+      "C4": "Editor / Designer / Printer",
+      "D4": "Work Description",
+      "E4": "Qty",
+      "F4": "Agreed Amount (\u20b9)",
+      "G4": "Advance Paid (\u20b9)",
+      "H4": "Final Paid (\u20b9)",
+      "I4": "Total Paid (auto)",
+      "J4": "Balance to Pay (auto)",
+      "K4": "Date Sent",
+      "L4": "Due Date",
+      "M4": "Date Received",
+      "N4": "Work Status",
+      "O4": "Notes",
+      "P4": "ID",
+      "Q4": "Key"
+    },
+    "hiddenColumns": [
+      "P"
+    ],
+    "hiddenRows": [],
+    "formulaCount": 2400,
+    "formulaExamples": [
+      {
+        "cell": "I5",
+        "formula": "=IF(P5=\"\",\"\",N(G5)+N(H5))"
+      },
+      {
+        "cell": "J5",
+        "formula": "=IF(P5=\"\",\"\",N(F5)-I5)"
+      },
+      {
+        "cell": "P5",
+        "formula": "=IF(A5=\"\",\"\",LEFT(A5,FIND(\" \",A5&\" \")-1))"
+      },
+      {
+        "cell": "Q5",
+        "formula": "=IF(P5=\"\",\"\",P5&\"|\"&COUNTIF(P$5:P5,P5))"
+      },
+      {
+        "cell": "I6",
+        "formula": "=IF(P6=\"\",\"\",N(G6)+N(H6))"
+      },
+      {
+        "cell": "J6",
+        "formula": "=IF(P6=\"\",\"\",N(F6)-I6)"
+      },
+      {
+        "cell": "P6",
+        "formula": "=IF(A6=\"\",\"\",LEFT(A6,FIND(\" \",A6&\" \")-1))"
+      },
+      {
+        "cell": "Q6",
+        "formula": "=IF(P6=\"\",\"\",P6&\"|\"&COUNTIF(P$5:P6,P6))"
+      },
+      {
+        "cell": "I7",
+        "formula": "=IF(P7=\"\",\"\",N(G7)+N(H7))"
+      },
+      {
+        "cell": "J7",
+        "formula": "=IF(P7=\"\",\"\",N(F7)-I7)"
+      },
+      {
+        "cell": "P7",
+        "formula": "=IF(A7=\"\",\"\",LEFT(A7,FIND(\" \",A7&\" \")-1))"
+      },
+      {
+        "cell": "Q7",
+        "formula": "=IF(P7=\"\",\"\",P7&\"|\"&COUNTIF(P$5:P7,P7))"
+      },
+      {
+        "cell": "I8",
+        "formula": "=IF(P8=\"\",\"\",N(G8)+N(H8))"
+      },
+      {
+        "cell": "J8",
+        "formula": "=IF(P8=\"\",\"\",N(F8)-I8)"
+      },
+      {
+        "cell": "P8",
+        "formula": "=IF(A8=\"\",\"\",LEFT(A8,FIND(\" \",A8&\" \")-1))"
+      },
+      {
+        "cell": "Q8",
+        "formula": "=IF(P8=\"\",\"\",P8&\"|\"&COUNTIF(P$5:P8,P8))"
+      },
+      {
+        "cell": "I9",
+        "formula": "=IF(P9=\"\",\"\",N(G9)+N(H9))"
+      },
+      {
+        "cell": "J9",
+        "formula": "=IF(P9=\"\",\"\",N(F9)-I9)"
+      },
+      {
+        "cell": "P9",
+        "formula": "=IF(A9=\"\",\"\",LEFT(A9,FIND(\" \",A9&\" \")-1))"
+      },
+      {
+        "cell": "Q9",
+        "formula": "=IF(P9=\"\",\"\",P9&\"|\"&COUNTIF(P$5:P9,P9))"
+      },
+      {
+        "cell": "I10",
+        "formula": "=IF(P10=\"\",\"\",N(G10)+N(H10))"
+      },
+      {
+        "cell": "J10",
+        "formula": "=IF(P10=\"\",\"\",N(F10)-I10)"
+      },
+      {
+        "cell": "P10",
+        "formula": "=IF(A10=\"\",\"\",LEFT(A10,FIND(\" \",A10&\" \")-1))"
+      },
+      {
+        "cell": "Q10",
+        "formula": "=IF(P10=\"\",\"\",P10&\"|\"&COUNTIF(P$5:P10,P10))"
+      },
+      {
+        "cell": "I11",
+        "formula": "=IF(P11=\"\",\"\",N(G11)+N(H11))"
+      },
+      {
+        "cell": "J11",
+        "formula": "=IF(P11=\"\",\"\",N(F11)-I11)"
+      },
+      {
+        "cell": "P11",
+        "formula": "=IF(A11=\"\",\"\",LEFT(A11,FIND(\" \",A11&\" \")-1))"
+      },
+      {
+        "cell": "Q11",
+        "formula": "=IF(P11=\"\",\"\",P11&\"|\"&COUNTIF(P$5:P11,P11))"
+      },
+      {
+        "cell": "I12",
+        "formula": "=IF(P12=\"\",\"\",N(G12)+N(H12))"
+      },
+      {
+        "cell": "J12",
+        "formula": "=IF(P12=\"\",\"\",N(F12)-I12)"
+      },
+      {
+        "cell": "P12",
+        "formula": "=IF(A12=\"\",\"\",LEFT(A12,FIND(\" \",A12&\" \")-1))"
+      },
+      {
+        "cell": "Q12",
+        "formula": "=IF(P12=\"\",\"\",P12&\"|\"&COUNTIF(P$5:P12,P12))"
+      },
+      {
+        "cell": "I13",
+        "formula": "=IF(P13=\"\",\"\",N(G13)+N(H13))"
+      },
+      {
+        "cell": "J13",
+        "formula": "=IF(P13=\"\",\"\",N(F13)-I13)"
+      },
+      {
+        "cell": "P13",
+        "formula": "=IF(A13=\"\",\"\",LEFT(A13,FIND(\" \",A13&\" \")-1))"
+      },
+      {
+        "cell": "Q13",
+        "formula": "=IF(P13=\"\",\"\",P13&\"|\"&COUNTIF(P$5:P13,P13))"
+      },
+      {
+        "cell": "I14",
+        "formula": "=IF(P14=\"\",\"\",N(G14)+N(H14))"
+      },
+      {
+        "cell": "J14",
+        "formula": "=IF(P14=\"\",\"\",N(F14)-I14)"
+      },
+      {
+        "cell": "P14",
+        "formula": "=IF(A14=\"\",\"\",LEFT(A14,FIND(\" \",A14&\" \")-1))"
+      },
+      {
+        "cell": "Q14",
+        "formula": "=IF(P14=\"\",\"\",P14&\"|\"&COUNTIF(P$5:P14,P14))"
+      },
+      {
+        "cell": "I15",
+        "formula": "=IF(P15=\"\",\"\",N(G15)+N(H15))"
+      },
+      {
+        "cell": "J15",
+        "formula": "=IF(P15=\"\",\"\",N(F15)-I15)"
+      },
+      {
+        "cell": "P15",
+        "formula": "=IF(A15=\"\",\"\",LEFT(A15,FIND(\" \",A15&\" \")-1))"
+      },
+      {
+        "cell": "Q15",
+        "formula": "=IF(P15=\"\",\"\",P15&\"|\"&COUNTIF(P$5:P15,P15))"
+      }
+    ],
+    "validation": [
+      {
+        "range": "K5:M604",
+        "formula": "43831",
+        "type": "date"
+      },
+      {
+        "range": "A5:A604",
+        "formula": "Setup!$W$5:$W$154",
+        "type": "list"
+      },
+      {
+        "range": "B5:B604",
+        "formula": "Setup!$M$5:$M$24",
+        "type": "list"
+      },
+      {
+        "range": "C5:C604",
+        "formula": "'Vendor Directory'!$A$5:$A$64",
+        "type": "list"
+      },
+      {
+        "range": "N5:N604",
+        "formula": "Setup!$R$5:$R$24",
+        "type": "list"
+      }
+    ]
+  },
+  {
+    "sheet": "Expenses",
+    "dimensions": "A1:K1004",
+    "state": "visible",
+    "headers": {
+      "A4": "Date",
+      "B4": "Client (pick from list)",
+      "C4": "Wedding Date (auto)",
+      "D4": "Category",
+      "E4": "Description",
+      "F4": "Amount (\u20b9)",
+      "G4": "Paid By",
+      "H4": "Mode",
+      "I4": "Bill / Reference",
+      "J4": "ID",
+      "K4": "Key"
+    },
+    "hiddenColumns": [
+      "J"
+    ],
+    "hiddenRows": [],
+    "formulaCount": 3000,
+    "formulaExamples": [
+      {
+        "cell": "C5",
+        "formula": "=IF(OR(J5=\"\",J5=\"GENERAL\"),\"\",IFERROR(IF(INDEX(Clients!$AI$5:$AI$154,MATCH(J5,Clients!$A$5:$A$154,0))=\"\",\"\",INDEX(Clients!$AI$5:$AI$154,MATCH(J5,Clients!$A$5:$A$154,0))),\"\"))"
+      },
+      {
+        "cell": "J5",
+        "formula": "=IF(B5=\"\",\"\",LEFT(B5,FIND(\" \",B5&\" \")-1))"
+      },
+      {
+        "cell": "K5",
+        "formula": "=IF(J5=\"\",\"\",J5&\"|\"&COUNTIF(J$5:J5,J5))"
+      },
+      {
+        "cell": "C6",
+        "formula": "=IF(OR(J6=\"\",J6=\"GENERAL\"),\"\",IFERROR(IF(INDEX(Clients!$AI$5:$AI$154,MATCH(J6,Clients!$A$5:$A$154,0))=\"\",\"\",INDEX(Clients!$AI$5:$AI$154,MATCH(J6,Clients!$A$5:$A$154,0))),\"\"))"
+      },
+      {
+        "cell": "J6",
+        "formula": "=IF(B6=\"\",\"\",LEFT(B6,FIND(\" \",B6&\" \")-1))"
+      },
+      {
+        "cell": "K6",
+        "formula": "=IF(J6=\"\",\"\",J6&\"|\"&COUNTIF(J$5:J6,J6))"
+      },
+      {
+        "cell": "C7",
+        "formula": "=IF(OR(J7=\"\",J7=\"GENERAL\"),\"\",IFERROR(IF(INDEX(Clients!$AI$5:$AI$154,MATCH(J7,Clients!$A$5:$A$154,0))=\"\",\"\",INDEX(Clients!$AI$5:$AI$154,MATCH(J7,Clients!$A$5:$A$154,0))),\"\"))"
+      },
+      {
+        "cell": "J7",
+        "formula": "=IF(B7=\"\",\"\",LEFT(B7,FIND(\" \",B7&\" \")-1))"
+      },
+      {
+        "cell": "K7",
+        "formula": "=IF(J7=\"\",\"\",J7&\"|\"&COUNTIF(J$5:J7,J7))"
+      },
+      {
+        "cell": "C8",
+        "formula": "=IF(OR(J8=\"\",J8=\"GENERAL\"),\"\",IFERROR(IF(INDEX(Clients!$AI$5:$AI$154,MATCH(J8,Clients!$A$5:$A$154,0))=\"\",\"\",INDEX(Clients!$AI$5:$AI$154,MATCH(J8,Clients!$A$5:$A$154,0))),\"\"))"
+      },
+      {
+        "cell": "J8",
+        "formula": "=IF(B8=\"\",\"\",LEFT(B8,FIND(\" \",B8&\" \")-1))"
+      },
+      {
+        "cell": "K8",
+        "formula": "=IF(J8=\"\",\"\",J8&\"|\"&COUNTIF(J$5:J8,J8))"
+      },
+      {
+        "cell": "C9",
+        "formula": "=IF(OR(J9=\"\",J9=\"GENERAL\"),\"\",IFERROR(IF(INDEX(Clients!$AI$5:$AI$154,MATCH(J9,Clients!$A$5:$A$154,0))=\"\",\"\",INDEX(Clients!$AI$5:$AI$154,MATCH(J9,Clients!$A$5:$A$154,0))),\"\"))"
+      },
+      {
+        "cell": "J9",
+        "formula": "=IF(B9=\"\",\"\",LEFT(B9,FIND(\" \",B9&\" \")-1))"
+      },
+      {
+        "cell": "K9",
+        "formula": "=IF(J9=\"\",\"\",J9&\"|\"&COUNTIF(J$5:J9,J9))"
+      },
+      {
+        "cell": "C10",
+        "formula": "=IF(OR(J10=\"\",J10=\"GENERAL\"),\"\",IFERROR(IF(INDEX(Clients!$AI$5:$AI$154,MATCH(J10,Clients!$A$5:$A$154,0))=\"\",\"\",INDEX(Clients!$AI$5:$AI$154,MATCH(J10,Clients!$A$5:$A$154,0))),\"\"))"
+      },
+      {
+        "cell": "J10",
+        "formula": "=IF(B10=\"\",\"\",LEFT(B10,FIND(\" \",B10&\" \")-1))"
+      },
+      {
+        "cell": "K10",
+        "formula": "=IF(J10=\"\",\"\",J10&\"|\"&COUNTIF(J$5:J10,J10))"
+      },
+      {
+        "cell": "C11",
+        "formula": "=IF(OR(J11=\"\",J11=\"GENERAL\"),\"\",IFERROR(IF(INDEX(Clients!$AI$5:$AI$154,MATCH(J11,Clients!$A$5:$A$154,0))=\"\",\"\",INDEX(Clients!$AI$5:$AI$154,MATCH(J11,Clients!$A$5:$A$154,0))),\"\"))"
+      },
+      {
+        "cell": "J11",
+        "formula": "=IF(B11=\"\",\"\",LEFT(B11,FIND(\" \",B11&\" \")-1))"
+      },
+      {
+        "cell": "K11",
+        "formula": "=IF(J11=\"\",\"\",J11&\"|\"&COUNTIF(J$5:J11,J11))"
+      },
+      {
+        "cell": "C12",
+        "formula": "=IF(OR(J12=\"\",J12=\"GENERAL\"),\"\",IFERROR(IF(INDEX(Clients!$AI$5:$AI$154,MATCH(J12,Clients!$A$5:$A$154,0))=\"\",\"\",INDEX(Clients!$AI$5:$AI$154,MATCH(J12,Clients!$A$5:$A$154,0))),\"\"))"
+      },
+      {
+        "cell": "J12",
+        "formula": "=IF(B12=\"\",\"\",LEFT(B12,FIND(\" \",B12&\" \")-1))"
+      },
+      {
+        "cell": "K12",
+        "formula": "=IF(J12=\"\",\"\",J12&\"|\"&COUNTIF(J$5:J12,J12))"
+      },
+      {
+        "cell": "C13",
+        "formula": "=IF(OR(J13=\"\",J13=\"GENERAL\"),\"\",IFERROR(IF(INDEX(Clients!$AI$5:$AI$154,MATCH(J13,Clients!$A$5:$A$154,0))=\"\",\"\",INDEX(Clients!$AI$5:$AI$154,MATCH(J13,Clients!$A$5:$A$154,0))),\"\"))"
+      },
+      {
+        "cell": "J13",
+        "formula": "=IF(B13=\"\",\"\",LEFT(B13,FIND(\" \",B13&\" \")-1))"
+      },
+      {
+        "cell": "K13",
+        "formula": "=IF(J13=\"\",\"\",J13&\"|\"&COUNTIF(J$5:J13,J13))"
+      },
+      {
+        "cell": "C14",
+        "formula": "=IF(OR(J14=\"\",J14=\"GENERAL\"),\"\",IFERROR(IF(INDEX(Clients!$AI$5:$AI$154,MATCH(J14,Clients!$A$5:$A$154,0))=\"\",\"\",INDEX(Clients!$AI$5:$AI$154,MATCH(J14,Clients!$A$5:$A$154,0))),\"\"))"
+      },
+      {
+        "cell": "J14",
+        "formula": "=IF(B14=\"\",\"\",LEFT(B14,FIND(\" \",B14&\" \")-1))"
+      },
+      {
+        "cell": "K14",
+        "formula": "=IF(J14=\"\",\"\",J14&\"|\"&COUNTIF(J$5:J14,J14))"
+      },
+      {
+        "cell": "C15",
+        "formula": "=IF(OR(J15=\"\",J15=\"GENERAL\"),\"\",IFERROR(IF(INDEX(Clients!$AI$5:$AI$154,MATCH(J15,Clients!$A$5:$A$154,0))=\"\",\"\",INDEX(Clients!$AI$5:$AI$154,MATCH(J15,Clients!$A$5:$A$154,0))),\"\"))"
+      },
+      {
+        "cell": "J15",
+        "formula": "=IF(B15=\"\",\"\",LEFT(B15,FIND(\" \",B15&\" \")-1))"
+      },
+      {
+        "cell": "K15",
+        "formula": "=IF(J15=\"\",\"\",J15&\"|\"&COUNTIF(J$5:J15,J15))"
+      },
+      {
+        "cell": "C16",
+        "formula": "=IF(OR(J16=\"\",J16=\"GENERAL\"),\"\",IFERROR(IF(INDEX(Clients!$AI$5:$AI$154,MATCH(J16,Clients!$A$5:$A$154,0))=\"\",\"\",INDEX(Clients!$AI$5:$AI$154,MATCH(J16,Clients!$A$5:$A$154,0))),\"\"))"
+      },
+      {
+        "cell": "J16",
+        "formula": "=IF(B16=\"\",\"\",LEFT(B16,FIND(\" \",B16&\" \")-1))"
+      },
+      {
+        "cell": "K16",
+        "formula": "=IF(J16=\"\",\"\",J16&\"|\"&COUNTIF(J$5:J16,J16))"
+      },
+      {
+        "cell": "C17",
+        "formula": "=IF(OR(J17=\"\",J17=\"GENERAL\"),\"\",IFERROR(IF(INDEX(Clients!$AI$5:$AI$154,MATCH(J17,Clients!$A$5:$A$154,0))=\"\",\"\",INDEX(Clients!$AI$5:$AI$154,MATCH(J17,Clients!$A$5:$A$154,0))),\"\"))"
+      },
+      {
+        "cell": "J17",
+        "formula": "=IF(B17=\"\",\"\",LEFT(B17,FIND(\" \",B17&\" \")-1))"
+      },
+      {
+        "cell": "K17",
+        "formula": "=IF(J17=\"\",\"\",J17&\"|\"&COUNTIF(J$5:J17,J17))"
+      },
+      {
+        "cell": "C18",
+        "formula": "=IF(OR(J18=\"\",J18=\"GENERAL\"),\"\",IFERROR(IF(INDEX(Clients!$AI$5:$AI$154,MATCH(J18,Clients!$A$5:$A$154,0))=\"\",\"\",INDEX(Clients!$AI$5:$AI$154,MATCH(J18,Clients!$A$5:$A$154,0))),\"\"))"
+      },
+      {
+        "cell": "J18",
+        "formula": "=IF(B18=\"\",\"\",LEFT(B18,FIND(\" \",B18&\" \")-1))"
+      },
+      {
+        "cell": "K18",
+        "formula": "=IF(J18=\"\",\"\",J18&\"|\"&COUNTIF(J$5:J18,J18))"
+      },
+      {
+        "cell": "C19",
+        "formula": "=IF(OR(J19=\"\",J19=\"GENERAL\"),\"\",IFERROR(IF(INDEX(Clients!$AI$5:$AI$154,MATCH(J19,Clients!$A$5:$A$154,0))=\"\",\"\",INDEX(Clients!$AI$5:$AI$154,MATCH(J19,Clients!$A$5:$A$154,0))),\"\"))"
+      },
+      {
+        "cell": "J19",
+        "formula": "=IF(B19=\"\",\"\",LEFT(B19,FIND(\" \",B19&\" \")-1))"
+      }
+    ],
+    "validation": [
+      {
+        "range": "A5:A1004",
+        "formula": "43831",
+        "type": "date"
+      },
+      {
+        "range": "B5:B1004",
+        "formula": "Setup!$V$5:$V$155",
+        "type": "list"
+      },
+      {
+        "range": "D5:D1004",
+        "formula": "Setup!$H$5:$H$24",
+        "type": "list"
+      },
+      {
+        "range": "H5:H1004",
+        "formula": "Setup!$I$5:$I$24",
+        "type": "list"
+      }
+    ]
+  },
+  {
+    "sheet": "Crew Directory",
+    "dimensions": "A1:F104",
+    "state": "visible",
+    "headers": {
+      "A4": "Crew Member Name",
+      "B4": "Main Category",
+      "C4": "Phone",
+      "D4": "UPI ID / Payment Details",
+      "E4": "City / Base",
+      "F4": "Notes"
+    },
+    "hiddenColumns": [],
+    "hiddenRows": [],
+    "formulaCount": 0,
+    "formulaExamples": [],
+    "validation": [
+      {
+        "range": "B5:B104",
+        "formula": "\"Photographer,Videographer,Drone,Live Streaming,Social Media Creator,Assistant\"",
+        "type": "list"
+      }
+    ]
+  },
+  {
+    "sheet": "Crew Rates",
+    "dimensions": "A1:E504",
+    "state": "visible",
+    "headers": {
+      "A4": "Crew Member",
+      "B4": "Category (role)",
+      "C4": "Function / Event",
+      "D4": "Rate per event (\u20b9)",
+      "E4": "Notes"
+    },
+    "hiddenColumns": [],
+    "hiddenRows": [],
+    "formulaCount": 0,
+    "formulaExamples": [],
+    "validation": [
+      {
+        "range": "A5:A504",
+        "formula": "'Crew Directory'!$A$5:$A$104",
+        "type": "list"
+      },
+      {
+        "range": "B5:B504",
+        "formula": "\"Photographer,Videographer,Drone,Live Streaming,Social Media Creator,Assistant\"",
+        "type": "list"
+      },
+      {
+        "range": "C5:C504",
+        "formula": "Setup!$U$5:$U$24",
+        "type": "list"
+      }
+    ]
+  },
+  {
+    "sheet": "Vendor Directory",
+    "dimensions": "A1:K64",
+    "state": "visible",
+    "headers": {
+      "A4": "Name / Business",
+      "B4": "Type",
+      "C4": "Phone",
+      "D4": "Email",
+      "E4": "UPI ID / Payment Details",
+      "F4": "Address / City",
+      "G4": "Notes",
+      "H4": "Jobs Given (auto)",
+      "I4": "Total Agreed (auto)",
+      "J4": "Total Paid (auto)",
+      "K4": "Balance Owed (auto)"
+    },
+    "hiddenColumns": [],
+    "hiddenRows": [],
+    "formulaCount": 240,
+    "formulaExamples": [
+      {
+        "cell": "H5",
+        "formula": "=IF(A5=\"\",\"\",COUNTIF('Post-Production'!$C$5:$C$604,A5))"
+      },
+      {
+        "cell": "I5",
+        "formula": "=IF(A5=\"\",\"\",SUMIFS('Post-Production'!$F$5:$F$604,'Post-Production'!$C$5:$C$604,A5))"
+      },
+      {
+        "cell": "J5",
+        "formula": "=IF(A5=\"\",\"\",SUMIFS('Post-Production'!$I$5:$I$604,'Post-Production'!$C$5:$C$604,A5))"
+      },
+      {
+        "cell": "K5",
+        "formula": "=IF(A5=\"\",\"\",I5-J5)"
+      },
+      {
+        "cell": "H6",
+        "formula": "=IF(A6=\"\",\"\",COUNTIF('Post-Production'!$C$5:$C$604,A6))"
+      },
+      {
+        "cell": "I6",
+        "formula": "=IF(A6=\"\",\"\",SUMIFS('Post-Production'!$F$5:$F$604,'Post-Production'!$C$5:$C$604,A6))"
+      },
+      {
+        "cell": "J6",
+        "formula": "=IF(A6=\"\",\"\",SUMIFS('Post-Production'!$I$5:$I$604,'Post-Production'!$C$5:$C$604,A6))"
+      },
+      {
+        "cell": "K6",
+        "formula": "=IF(A6=\"\",\"\",I6-J6)"
+      },
+      {
+        "cell": "H7",
+        "formula": "=IF(A7=\"\",\"\",COUNTIF('Post-Production'!$C$5:$C$604,A7))"
+      },
+      {
+        "cell": "I7",
+        "formula": "=IF(A7=\"\",\"\",SUMIFS('Post-Production'!$F$5:$F$604,'Post-Production'!$C$5:$C$604,A7))"
+      },
+      {
+        "cell": "J7",
+        "formula": "=IF(A7=\"\",\"\",SUMIFS('Post-Production'!$I$5:$I$604,'Post-Production'!$C$5:$C$604,A7))"
+      },
+      {
+        "cell": "K7",
+        "formula": "=IF(A7=\"\",\"\",I7-J7)"
+      },
+      {
+        "cell": "H8",
+        "formula": "=IF(A8=\"\",\"\",COUNTIF('Post-Production'!$C$5:$C$604,A8))"
+      },
+      {
+        "cell": "I8",
+        "formula": "=IF(A8=\"\",\"\",SUMIFS('Post-Production'!$F$5:$F$604,'Post-Production'!$C$5:$C$604,A8))"
+      },
+      {
+        "cell": "J8",
+        "formula": "=IF(A8=\"\",\"\",SUMIFS('Post-Production'!$I$5:$I$604,'Post-Production'!$C$5:$C$604,A8))"
+      },
+      {
+        "cell": "K8",
+        "formula": "=IF(A8=\"\",\"\",I8-J8)"
+      },
+      {
+        "cell": "H9",
+        "formula": "=IF(A9=\"\",\"\",COUNTIF('Post-Production'!$C$5:$C$604,A9))"
+      },
+      {
+        "cell": "I9",
+        "formula": "=IF(A9=\"\",\"\",SUMIFS('Post-Production'!$F$5:$F$604,'Post-Production'!$C$5:$C$604,A9))"
+      },
+      {
+        "cell": "J9",
+        "formula": "=IF(A9=\"\",\"\",SUMIFS('Post-Production'!$I$5:$I$604,'Post-Production'!$C$5:$C$604,A9))"
+      },
+      {
+        "cell": "K9",
+        "formula": "=IF(A9=\"\",\"\",I9-J9)"
+      },
+      {
+        "cell": "H10",
+        "formula": "=IF(A10=\"\",\"\",COUNTIF('Post-Production'!$C$5:$C$604,A10))"
+      },
+      {
+        "cell": "I10",
+        "formula": "=IF(A10=\"\",\"\",SUMIFS('Post-Production'!$F$5:$F$604,'Post-Production'!$C$5:$C$604,A10))"
+      },
+      {
+        "cell": "J10",
+        "formula": "=IF(A10=\"\",\"\",SUMIFS('Post-Production'!$I$5:$I$604,'Post-Production'!$C$5:$C$604,A10))"
+      },
+      {
+        "cell": "K10",
+        "formula": "=IF(A10=\"\",\"\",I10-J10)"
+      },
+      {
+        "cell": "H11",
+        "formula": "=IF(A11=\"\",\"\",COUNTIF('Post-Production'!$C$5:$C$604,A11))"
+      },
+      {
+        "cell": "I11",
+        "formula": "=IF(A11=\"\",\"\",SUMIFS('Post-Production'!$F$5:$F$604,'Post-Production'!$C$5:$C$604,A11))"
+      },
+      {
+        "cell": "J11",
+        "formula": "=IF(A11=\"\",\"\",SUMIFS('Post-Production'!$I$5:$I$604,'Post-Production'!$C$5:$C$604,A11))"
+      },
+      {
+        "cell": "K11",
+        "formula": "=IF(A11=\"\",\"\",I11-J11)"
+      },
+      {
+        "cell": "H12",
+        "formula": "=IF(A12=\"\",\"\",COUNTIF('Post-Production'!$C$5:$C$604,A12))"
+      },
+      {
+        "cell": "I12",
+        "formula": "=IF(A12=\"\",\"\",SUMIFS('Post-Production'!$F$5:$F$604,'Post-Production'!$C$5:$C$604,A12))"
+      },
+      {
+        "cell": "J12",
+        "formula": "=IF(A12=\"\",\"\",SUMIFS('Post-Production'!$I$5:$I$604,'Post-Production'!$C$5:$C$604,A12))"
+      },
+      {
+        "cell": "K12",
+        "formula": "=IF(A12=\"\",\"\",I12-J12)"
+      },
+      {
+        "cell": "H13",
+        "formula": "=IF(A13=\"\",\"\",COUNTIF('Post-Production'!$C$5:$C$604,A13))"
+      },
+      {
+        "cell": "I13",
+        "formula": "=IF(A13=\"\",\"\",SUMIFS('Post-Production'!$F$5:$F$604,'Post-Production'!$C$5:$C$604,A13))"
+      },
+      {
+        "cell": "J13",
+        "formula": "=IF(A13=\"\",\"\",SUMIFS('Post-Production'!$I$5:$I$604,'Post-Production'!$C$5:$C$604,A13))"
+      },
+      {
+        "cell": "K13",
+        "formula": "=IF(A13=\"\",\"\",I13-J13)"
+      },
+      {
+        "cell": "H14",
+        "formula": "=IF(A14=\"\",\"\",COUNTIF('Post-Production'!$C$5:$C$604,A14))"
+      },
+      {
+        "cell": "I14",
+        "formula": "=IF(A14=\"\",\"\",SUMIFS('Post-Production'!$F$5:$F$604,'Post-Production'!$C$5:$C$604,A14))"
+      },
+      {
+        "cell": "J14",
+        "formula": "=IF(A14=\"\",\"\",SUMIFS('Post-Production'!$I$5:$I$604,'Post-Production'!$C$5:$C$604,A14))"
+      },
+      {
+        "cell": "K14",
+        "formula": "=IF(A14=\"\",\"\",I14-J14)"
+      },
+      {
+        "cell": "H15",
+        "formula": "=IF(A15=\"\",\"\",COUNTIF('Post-Production'!$C$5:$C$604,A15))"
+      },
+      {
+        "cell": "I15",
+        "formula": "=IF(A15=\"\",\"\",SUMIFS('Post-Production'!$F$5:$F$604,'Post-Production'!$C$5:$C$604,A15))"
+      },
+      {
+        "cell": "J15",
+        "formula": "=IF(A15=\"\",\"\",SUMIFS('Post-Production'!$I$5:$I$604,'Post-Production'!$C$5:$C$604,A15))"
+      },
+      {
+        "cell": "K15",
+        "formula": "=IF(A15=\"\",\"\",I15-J15)"
+      }
+    ],
+    "validation": [
+      {
+        "range": "B5:B64",
+        "formula": "Setup!$M$5:$M$24",
+        "type": "list"
+      }
+    ]
+  },
+  {
+    "sheet": "Setup",
+    "dimensions": "A1:W155",
+    "state": "visible",
+    "headers": {
+      "G4": "Events",
+      "H4": "Expense Categories",
+      "I4": "Payment Modes",
+      "J4": "Client Status",
+      "K4": "Deliverable Types",
+      "L4": "Deliverable Status",
+      "M4": "Vendor / Work Types",
+      "N4": "Album Styles",
+      "O4": "Album Status",
+      "P4": "Lead Sources",
+      "Q4": "Client Payment Types",
+      "R4": "Work Status",
+      "S4": "Crew Payment Types",
+      "T4": "Event Work Status",
+      "U4": "Functions for Crew Rates (auto)",
+      "V4": "Clients + GENERAL (auto)",
+      "W4": "Clients (auto)"
+    },
+    "hiddenColumns": [],
+    "hiddenRows": [],
+    "formulaCount": 319,
+    "formulaExamples": [
+      {
+        "cell": "W5",
+        "formula": "=IF(Clients!A5=\"\",\"\",Clients!A5&\" | \"&Clients!B5)"
+      },
+      {
+        "cell": "U6",
+        "formula": "=IF(G5=\"\",\"\",G5)"
+      },
+      {
+        "cell": "V6",
+        "formula": "=IF(W5=\"\",\"\",W5)"
+      },
+      {
+        "cell": "W6",
+        "formula": "=IF(Clients!A6=\"\",\"\",Clients!A6&\" | \"&Clients!B6)"
+      },
+      {
+        "cell": "U7",
+        "formula": "=IF(G6=\"\",\"\",G6)"
+      },
+      {
+        "cell": "V7",
+        "formula": "=IF(W6=\"\",\"\",W6)"
+      },
+      {
+        "cell": "W7",
+        "formula": "=IF(Clients!A7=\"\",\"\",Clients!A7&\" | \"&Clients!B7)"
+      },
+      {
+        "cell": "U8",
+        "formula": "=IF(G7=\"\",\"\",G7)"
+      },
+      {
+        "cell": "V8",
+        "formula": "=IF(W7=\"\",\"\",W7)"
+      },
+      {
+        "cell": "W8",
+        "formula": "=IF(Clients!A8=\"\",\"\",Clients!A8&\" | \"&Clients!B8)"
+      },
+      {
+        "cell": "U9",
+        "formula": "=IF(G8=\"\",\"\",G8)"
+      },
+      {
+        "cell": "V9",
+        "formula": "=IF(W8=\"\",\"\",W8)"
+      },
+      {
+        "cell": "W9",
+        "formula": "=IF(Clients!A9=\"\",\"\",Clients!A9&\" | \"&Clients!B9)"
+      },
+      {
+        "cell": "U10",
+        "formula": "=IF(G9=\"\",\"\",G9)"
+      },
+      {
+        "cell": "V10",
+        "formula": "=IF(W9=\"\",\"\",W9)"
+      },
+      {
+        "cell": "W10",
+        "formula": "=IF(Clients!A10=\"\",\"\",Clients!A10&\" | \"&Clients!B10)"
+      },
+      {
+        "cell": "U11",
+        "formula": "=IF(G10=\"\",\"\",G10)"
+      },
+      {
+        "cell": "V11",
+        "formula": "=IF(W10=\"\",\"\",W10)"
+      },
+      {
+        "cell": "W11",
+        "formula": "=IF(Clients!A11=\"\",\"\",Clients!A11&\" | \"&Clients!B11)"
+      },
+      {
+        "cell": "U12",
+        "formula": "=IF(G11=\"\",\"\",G11)"
+      },
+      {
+        "cell": "V12",
+        "formula": "=IF(W11=\"\",\"\",W11)"
+      },
+      {
+        "cell": "W12",
+        "formula": "=IF(Clients!A12=\"\",\"\",Clients!A12&\" | \"&Clients!B12)"
+      },
+      {
+        "cell": "U13",
+        "formula": "=IF(G12=\"\",\"\",G12)"
+      },
+      {
+        "cell": "V13",
+        "formula": "=IF(W12=\"\",\"\",W12)"
+      },
+      {
+        "cell": "W13",
+        "formula": "=IF(Clients!A13=\"\",\"\",Clients!A13&\" | \"&Clients!B13)"
+      },
+      {
+        "cell": "U14",
+        "formula": "=IF(G13=\"\",\"\",G13)"
+      },
+      {
+        "cell": "V14",
+        "formula": "=IF(W13=\"\",\"\",W13)"
+      },
+      {
+        "cell": "W14",
+        "formula": "=IF(Clients!A14=\"\",\"\",Clients!A14&\" | \"&Clients!B14)"
+      },
+      {
+        "cell": "U15",
+        "formula": "=IF(G14=\"\",\"\",G14)"
+      },
+      {
+        "cell": "V15",
+        "formula": "=IF(W14=\"\",\"\",W14)"
+      },
+      {
+        "cell": "W15",
+        "formula": "=IF(Clients!A15=\"\",\"\",Clients!A15&\" | \"&Clients!B15)"
+      },
+      {
+        "cell": "U16",
+        "formula": "=IF(G15=\"\",\"\",G15)"
+      },
+      {
+        "cell": "V16",
+        "formula": "=IF(W15=\"\",\"\",W15)"
+      },
+      {
+        "cell": "W16",
+        "formula": "=IF(Clients!A16=\"\",\"\",Clients!A16&\" | \"&Clients!B16)"
+      },
+      {
+        "cell": "U17",
+        "formula": "=IF(G16=\"\",\"\",G16)"
+      },
+      {
+        "cell": "V17",
+        "formula": "=IF(W16=\"\",\"\",W16)"
+      },
+      {
+        "cell": "W17",
+        "formula": "=IF(Clients!A17=\"\",\"\",Clients!A17&\" | \"&Clients!B17)"
+      },
+      {
+        "cell": "U18",
+        "formula": "=IF(G17=\"\",\"\",G17)"
+      },
+      {
+        "cell": "V18",
+        "formula": "=IF(W17=\"\",\"\",W17)"
+      },
+      {
+        "cell": "W18",
+        "formula": "=IF(Clients!A18=\"\",\"\",Clients!A18&\" | \"&Clients!B18)"
+      },
+      {
+        "cell": "U19",
+        "formula": "=IF(G18=\"\",\"\",G18)"
+      },
+      {
+        "cell": "V19",
+        "formula": "=IF(W18=\"\",\"\",W18)"
+      },
+      {
+        "cell": "W19",
+        "formula": "=IF(Clients!A19=\"\",\"\",Clients!A19&\" | \"&Clients!B19)"
+      },
+      {
+        "cell": "U20",
+        "formula": "=IF(G19=\"\",\"\",G19)"
+      }
+    ],
+    "validation": []
+  }
+]

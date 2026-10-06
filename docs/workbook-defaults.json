@@ -1,0 +1,117 @@
+{
+  "Events": [
+    "Engagement",
+    "Haldi",
+    "Mehendi",
+    "Sangeet",
+    "Bride Preparation",
+    "Groom Preparation",
+    "Wedding Ceremony",
+    "Wedding Evening",
+    "Reception",
+    "Pre-Wedding Shoot",
+    "Post-Wedding Shoot",
+    "Save the Date",
+    "Other"
+  ],
+  "Expense Categories": [
+    "Travel",
+    "Accommodation",
+    "Food",
+    "Equipment Rental",
+    "Storage & Media",
+    "Courier & Delivery",
+    "Marketing",
+    "Software & Subscriptions",
+    "Miscellaneous"
+  ],
+  "Payment Modes": [
+    "Cash",
+    "UPI",
+    "Bank Transfer",
+    "Cheque",
+    "Card"
+  ],
+  "Client Status": [
+    "Confirmed",
+    "Shoot Done",
+    "Post-Production",
+    "Delivered",
+    "Closed",
+    "Cancelled"
+  ],
+  "Deliverable Types": [
+    "Edited Photos (Online Gallery)",
+    "Teaser",
+    "Highlight Film",
+    "Full Wedding Film",
+    "Reels",
+    "Drone Footage",
+    "Raw Footage",
+    "Pen Drive / Hard Drive",
+    "Framed Photos",
+    "Other"
+  ],
+  "Deliverable Status": [
+    "Not Started",
+    "In Progress",
+    "Sent for Approval",
+    "Revision",
+    "Delivered"
+  ],
+  "Vendor / Work Types": [
+    "Photo Editor",
+    "Video Editor",
+    "Album Designer",
+    "Album Printer",
+    "Colorist",
+    "Frame / Print Lab",
+    "Other"
+  ],
+  "Album Styles": [
+    "Flush Mount",
+    "Layflat",
+    "Magazine",
+    "Photo Book",
+    "Other"
+  ],
+  "Album Status": [
+    "Selection Pending",
+    "Designing",
+    "Client Review",
+    "Printing",
+    "Ready",
+    "Delivered"
+  ],
+  "Lead Sources": [
+    "Instagram",
+    "Referral",
+    "Google",
+    "Facebook",
+    "Venue / Vendor",
+    "Repeat Client",
+    "Other"
+  ],
+  "Client Payment Types": [
+    "Advance",
+    "Instalment",
+    "Final",
+    "Add-on"
+  ],
+  "Work Status": [
+    "Not Started",
+    "Sent",
+    "In Progress",
+    "Received",
+    "Approved"
+  ],
+  "Crew Payment Types": [
+    "Advance",
+    "Final",
+    "Other"
+  ],
+  "Event Work Status": [
+    "Assigned",
+    "Completed"
+  ]
+}

@@ -1,0 +1,21 @@
+node_modules/
+.next/
+.env*
+.data/
+*.tsbuildinfo
+playwright-report/
+test-results/
+
+next-env.d.ts
+
+# Private inputs, runtime data, credentials, and generated artifacts
+attachments/
+*.xlsx
+*.xls
+*.csv
+*.zip
+*.log
+*.sqlite*
+*.db
+*.pem
+*.key

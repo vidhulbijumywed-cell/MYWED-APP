@@ -1,0 +1,11 @@
+# Same-platform local deployment using the already verified npm installation and production build.
+# Run npm ci and npm run build before building this image.
+FROM node:24-bookworm-slim
+WORKDIR /app
+ENV NODE_ENV=production
+COPY --chown=node:node . /app
+RUN mkdir -p /app/.data && chown node:node /app/.data
+USER node
+EXPOSE 3000
+HEALTHCHECK --interval=30s --timeout=5s --start-period=15s CMD node -e "fetch('http://127.0.0.1:3000/').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"
+CMD ["npm", "start"]

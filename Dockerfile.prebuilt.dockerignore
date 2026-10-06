@@ -1,0 +1,7 @@
+.git
+.data
+.env*
+.next/cache
+test-results
+playwright-report
+*.tsbuildinfo
