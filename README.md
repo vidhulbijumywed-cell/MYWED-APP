@@ -5,6 +5,7 @@ A runnable, company-scoped wedding photography business application built from t
 The Mywed.in wedding company website is at `/studio`. It includes a responsive
 landing page and a detailed quote enquiry builder that opens WhatsApp for the
 visitor to send. See [studio website instructions](docs/STUDIO_WEBSITE.md).
+For public hosting with stored quote enquiries, see [Render + Neon deployment](docs/RENDER_NEON.md).
 
 ## Run locally
 

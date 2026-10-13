@@ -4,22 +4,27 @@ The wedding company landing page is independent of the business-management login
 Run `npm run dev` and open `http://localhost:3000/studio`.
 
 `public/studio/index.html` is self-contained: it can also be opened directly in a
-browser or hosted as a static website. It needs no database, npm dependencies,
-external fonts, or third-party scripts. Deploy this directory as a separate site
-to make the wedding company page the homepage of a public domain.
+browser or hosted as a static website for the WhatsApp workflow. That mode needs
+no database, external fonts, or third-party scripts. Saving enquiries requires
+the Next.js backend; use the [Render + Neon instructions](RENDER_NEON.md).
 
 ## Enquiries
 
 The form collects bride and groom names and telephone numbers, optional email,
 preferred contact, multiple events with dates/locations and per-event services,
 album/digital preferences, optional budget, and notes. After validation, visitors
-review the full enquiry before opening a prefilled WhatsApp message to
-`+91 77365 99362`. They must press Send in WhatsApp; the website never claims a
-message has been delivered. A plain-text download/copy option is provided.
+review the full enquiry. On the hosted application, **Submit enquiry** saves it
+to PostgreSQL and confirms success only after the server responds. Visitors can
+also open a prefilled WhatsApp message to `+91 77365 99362`. They must press Send
+in WhatsApp; the website never claims a message has been delivered. A plain-text
+download/copy option is provided. Opening the HTML directly hides database
+submission and retains the WhatsApp workflow.
 
-No enquiry is stored in the app database, browser storage, or this repository.
-To create an inbox with automatic email or CRM delivery, implement and configure
-a server endpoint separately. Sending a WhatsApp enquiry does not book an event.
+Submitted enquiries are stored in the private `studio_enquiries` table. They are
+not saved to browser storage or this repository. No public listing endpoint is
+provided; viewing currently uses the private Neon console. Automatic email
+notifications and an admin inbox are not implemented. An enquiry does not book
+an event. Local records are not automatically transferred to Neon.
 
 ## Brand and photography
 

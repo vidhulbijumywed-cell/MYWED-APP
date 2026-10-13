@@ -1,6 +1,6 @@
 import { PGlite } from "@electric-sql/pglite";
 import { Pool } from "pg";
-import { readFileSync, mkdirSync } from "node:fs";
+import { readFileSync, readdirSync, mkdirSync } from "node:fs";
 import path from "node:path";
 type Result = { rows: Record<string, any>[] };
 export type Query = (sql: string, params?: any[]) => Promise<Result>;
@@ -10,16 +10,17 @@ type Database = {
 };
 const globalDb = globalThis as unknown as { mywedDb?: Promise<Database> };
 async function create(): Promise<Database> {
-  const migration = readFileSync(
-    path.join(process.cwd(), "migrations/001_initial.sql"),
-    "utf8",
-  );
+  const migrationDir = path.join(process.cwd(), "migrations");
+  const migrations = readdirSync(migrationDir)
+    .filter((file) => /^\d+_[\w-]+\.sql$/.test(file))
+    .sort()
+    .map((file) => readFileSync(path.join(migrationDir, file), "utf8"));
   if (process.env.DATABASE_URL) {
     const pool = new Pool({
       connectionString: process.env.DATABASE_URL,
       max: 5,
     });
-    await pool.query(migration);
+    for (const migration of migrations) await pool.query(migration);
     return {
       query: async (s, p) => pool.query(s, p),
       transaction: async (fn) => {
@@ -43,7 +44,7 @@ async function create(): Promise<Database> {
   mkdirSync(dir, { recursive: true });
   const pg = new PGlite(dir);
   await pg.waitReady;
-  await pg.exec(migration);
+  for (const migration of migrations) await pg.exec(migration);
   return {
     query: async (s, p) => pg.query(s, p),
     transaction: async (fn) =>

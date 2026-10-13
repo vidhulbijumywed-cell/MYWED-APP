@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: mywed-studio
+    runtime: node
+    plan: free
+    branch: main
+    buildCommand: npm ci --include=dev && npm run build
+    startCommand: npm start -- --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 24
+      - key: STUDIO_SITE_ONLY
+        value: "true"
+      - key: DATABASE_URL
+        sync: false
+      - key: ENQUIRY_RATE_LIMIT_SECRET
+        generateValue: true
+      - key: COOKIE_SECURE
+        value: "true"
+      - key: ALLOW_LOCAL_MAIL
+        value: "false"
