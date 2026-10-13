@@ -19,3 +19,5 @@ attachments/
 *.db
 *.pem
 *.key
+.neon
+.agents/

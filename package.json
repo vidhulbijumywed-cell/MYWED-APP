@@ -11,10 +11,13 @@
     "seed": "tsx scripts/seed.ts",
     "mail": "tsx scripts/mail.ts",
     "format": "prettier --write src scripts tests docs/*.md *.json *.ts",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "verify:neon": "tsx scripts/verify-neon.ts"
   },
   "dependencies": {
     "@electric-sql/pglite": "^0.3.0",
+    "@neon/config": "^1.9.1",
+    "@neon/env": "^1.6.1",
     "@supabase/supabase-js": "^2.0.0",
     "exceljs": "^4.4.0",
     "lucide-react": "^0.468.0",

@@ -23,6 +23,9 @@ and select `vidhulbijumywed-cell/MYWED-APP`, branch `main`. Render reads
 `render.yaml`. Supply the Neon connection string for **DATABASE_URL** in Render's
 private environment settings, then deploy. The Blueprint generates an enquiry
 rate-limit secret. Review the service plan and any charges before deploying.
+Also supply **DATABASE_URL_UNPOOLED**, the direct connection string used for
+migrations. `neon deploy` pulls both variables when CLI access is configured;
+see [Neon setup and verification](NEON_SETUP.md).
 
 The configuration is a Node **Web Service**, not a Static Site, because saving
 enquiries requires a backend. It uses Node 24, builds with

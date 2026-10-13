@@ -2,6 +2,8 @@ import { PGlite } from "@electric-sql/pglite";
 import { Pool } from "pg";
 import { readFileSync, readdirSync, mkdirSync } from "node:fs";
 import path from "node:path";
+import { parseEnv } from "@neon/env";
+import neonConfig from "../../neon";
 type Result = { rows: Record<string, any>[] };
 export type Query = (sql: string, params?: any[]) => Promise<Result>;
 type Database = {
@@ -16,11 +18,29 @@ async function create(): Promise<Database> {
     .sort()
     .map((file) => readFileSync(path.join(migrationDir, file), "utf8"));
   if (process.env.DATABASE_URL) {
+    const { postgres } = parseEnv(neonConfig, ["DATABASE_URL"]);
     const pool = new Pool({
-      connectionString: process.env.DATABASE_URL,
+      connectionString: postgres.databaseUrl,
       max: 5,
+      connectionTimeoutMillis: 15000,
+      idleTimeoutMillis: 30000,
     });
-    for (const migration of migrations) await pool.query(migration);
+    // Neon provides a direct URL for schema work and a pooled URL for queries.
+    const migrationPool = process.env.DATABASE_URL_UNPOOLED
+      ? new Pool({
+          connectionString: process.env.DATABASE_URL_UNPOOLED,
+          max: 1,
+          connectionTimeoutMillis: 15000,
+        })
+      : pool;
+    try {
+      for (const migration of migrations) await migrationPool.query(migration);
+    } catch (error) {
+      await pool.end();
+      throw error;
+    } finally {
+      if (migrationPool !== pool) await migrationPool.end();
+    }
     return {
       query: async (s, p) => pool.query(s, p),
       transaction: async (fn) => {
@@ -38,6 +58,11 @@ async function create(): Promise<Database> {
         }
       },
     };
+  }
+  if (process.env.NODE_ENV === "production") {
+    throw new Error(
+      "DATABASE_URL is required in production; local database fallback is disabled.",
+    );
   }
   const dir =
     process.env.MYWED_DATA_DIR || path.join(process.cwd(), ".data/postgres");

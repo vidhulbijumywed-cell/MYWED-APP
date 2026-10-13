@@ -12,6 +12,8 @@ import {
 } from "../src/lib/studio-enquiries";
 import { POST } from "../src/app/api/studio-enquiries/route";
 
+delete process.env.DATABASE_URL;
+delete process.env.DATABASE_URL_UNPOOLED;
 process.env.MYWED_DATA_DIR = mkdtempSync(
   path.join(tmpdir(), "mywed-enquiry-test-"),
 );

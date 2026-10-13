@@ -5,6 +5,7 @@ Create configuration locally or use your hosting provider's secure environment s
 | Variable | Purpose |
 | --- | --- |
 | `DATABASE_URL` | Hosted PostgreSQL connection string. Leave unset for local persistent PGlite. Treat as a secret. |
+| `DATABASE_URL_UNPOOLED` | Neon direct connection string for migrations. Application queries continue to use the pooled `DATABASE_URL`. Treat as a secret. |
 | `APP_URL` | Canonical application origin; use HTTPS in public production. |
 | `SUPABASE_URL` | Supabase project URL for managed authentication. |
 | `SUPABASE_ANON_KEY` | Project authentication key; configure together with `SUPABASE_URL`. |

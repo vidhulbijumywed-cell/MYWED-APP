@@ -19,6 +19,9 @@ import { query } from "../src/lib/db";
 import { loadData, saveRecord, deleteRecord } from "../src/lib/service";
 import { commitPreview, parseWorkbook } from "../src/lib/importer";
 import { Context, passwordHash, checkPassword } from "../src/lib/auth";
+// Unit fixtures must never write to a hosted database injected by Neon/CI.
+delete process.env.DATABASE_URL;
+delete process.env.DATABASE_URL_UNPOOLED;
 process.env.MYWED_DATA_DIR = mkdtempSync(path.join(tmpdir(), "mywed-test-"));
 import defaults from "../docs/workbook-defaults.json";
 const uuid = randomUUID;
