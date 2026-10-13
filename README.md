@@ -2,6 +2,10 @@
 
 A runnable, company-scoped wedding photography business application built from the supplied wedding tracker. Next.js 16, React 19, TypeScript, Tailwind 4, PostgreSQL, ExcelJS, and pdf-lib.
 
+The Mywed.in wedding company website is at `/studio`. It includes a responsive
+landing page and a detailed quote enquiry builder that opens WhatsApp for the
+visitor to send. See [studio website instructions](docs/STUDIO_WEBSITE.md).
+
 ## Run locally
 
 Requires Node 24 (tested) and npm 11. The checkout is already an isolated workspace; use it directly, without creating another worktree.
