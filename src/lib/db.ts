@@ -11,6 +11,27 @@ type Database = {
   transaction: <T>(fn: (q: Query) => Promise<T>) => Promise<T>;
 };
 const globalDb = globalThis as unknown as { mywedDb?: Promise<Database> };
+function validateConnection(name: string, value: string) {
+  try {
+    const url = new URL(value);
+    if (
+      !["postgres:", "postgresql:"].includes(url.protocol) ||
+      !url.hostname ||
+      !url.username ||
+      !url.pathname.slice(1)
+    ) {
+      throw new Error("invalid");
+    }
+  } catch {
+    throw Object.assign(
+      new Error(`${name} must contain only a PostgreSQL connection URL.`),
+      {
+        code:
+          name === "DATABASE_URL" ? "DB_URL_INVALID" : "DB_DIRECT_URL_INVALID",
+      },
+    );
+  }
+}
 async function create(): Promise<Database> {
   const migrationDir = path.join(process.cwd(), "migrations");
   const migrations = readdirSync(migrationDir)
@@ -18,6 +39,12 @@ async function create(): Promise<Database> {
     .sort()
     .map((file) => readFileSync(path.join(migrationDir, file), "utf8"));
   if (process.env.DATABASE_URL) {
+    validateConnection("DATABASE_URL", process.env.DATABASE_URL);
+    if (process.env.DATABASE_URL_UNPOOLED)
+      validateConnection(
+        "DATABASE_URL_UNPOOLED",
+        process.env.DATABASE_URL_UNPOOLED,
+      );
     const { postgres } = parseEnv(neonConfig, ["DATABASE_URL"]);
     const pool = new Pool({
       connectionString: postgres.databaseUrl,
@@ -77,7 +104,14 @@ async function create(): Promise<Database> {
   };
 }
 export async function db() {
-  return (globalDb.mywedDb ??= create());
+  const pending = (globalDb.mywedDb ??= create());
+  try {
+    return await pending;
+  } catch (error) {
+    // A failed first connection must not poison all future Render health probes.
+    if (globalDb.mywedDb === pending) globalDb.mywedDb = undefined;
+    throw error;
+  }
 }
 export const query: Query = async (s, p) => (await db()).query(s, p);
 export async function transaction<T>(fn: (q: Query) => Promise<T>) {
